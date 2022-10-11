@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<script>
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/*loop through a collection of all HTML elements:*/
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+				/*make an HTTP request using the attribute value as the file name:*/
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+					/*remove the attribute, and call this function once more:*/
+					elmnt.removeAttribute("w3-include-html");
+					includeHTML();
+					};
+				};
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/*exit the function:*/
+				return;
+				};
+			};
+		};
+	</script>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Format</title>
+	<link rel="shortcut icon" href="img/shortcut.png">
+
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+
+	<script type="text/javascript" src="js/all.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/style_format.css">
+	<link rel="stylesheet" type="text/css" href="css/style_format_typo.css">
+	<link rel="stylesheet" type="text/css" href="css/style_navi.css">
+	
+
+</head>
+<body>
+	<div w3-include-html="navi.html"></div>
+
+	<div class="body">
+		
+	</div>
+
+	<div w3-include-html="footer.html"></div>
+
+	<script type="text/javascript">
+		includeHTML();
+	</script>
+</body>
+</html>
+
+
+

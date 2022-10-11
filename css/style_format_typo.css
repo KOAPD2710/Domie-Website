@@ -1,0 +1,67 @@
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/JosefinSans-Regular.ttf),
+			url(../fonts/JosefinSans-Regular.otf),
+			url(../fonts/JosefinSans-Regular.woff);
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/JosefinSans-Bold.ttf),
+			url(../fonts/JosefinSans-Bold.otf),
+			url(../fonts/JosefinSans-Bold.woff);
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face{
+	font-family: Fontt;
+	src:	url(../fonts/JosefinSans-SemiBold.ttf),
+			url(../fonts/JosefinSans-SemiBold.otf),
+			url(../fonts/JosefinSans-SemiBold.woff);
+	font-style: normal;
+	font-weight: 800;
+}
+
+h1{
+	font-size: 7.625rem;
+	letter-spacing: -1.5px;
+}
+
+h2{
+	font-size: 4.75rem;
+	letter-spacing: -.5px;
+}
+
+h3{
+	font-size: 3.75rem;
+	letter-spacing: 0px;
+}
+
+h4{
+	font-size: 2.75rem;
+	letter-spacing: .25px;
+}
+
+h5{
+	font-size: 2rem;
+	letter-spacing: 0px;
+}
+
+h6{
+	font-size: 1.5rem;
+	letter-spacing: .15px;
+}
+
+p{
+	font-size: 1.25rem;
+	letter-spacing: .5px;
+}
+
+body{
+	font-family: Fontt;
+	font-size: 100%;
+	line-height: 1.5;
+}

@@ -1,0 +1,33 @@
+:root{
+	--g1: #444444;
+	--g2: #B7B7B7;
+	--c1: #FF96A2;
+	--c2: #F47595;
+	--c3: #B15A9A;
+	--c4: #494BA2;
+	--gra-full: linear-gradient(to right, #494BA2 -1%, #B15A9A 34%, #F47595 68%, #FF96A2 101%);
+	--gra-mid: linear-gradient(to right, #B15A9A 0%, #F47595 50%, #FF96A2 101%);
+}
+
+button*{
+	user-select: none;
+}
+
+*a{
+	text-decoration: none;
+}
+
+body{
+	position: relative;
+	display: block;
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	color: black;
+	background-color: white;
+
+}
+
+.break{
+	padding-left: 5%;
+	padding-right: 5%;
+}

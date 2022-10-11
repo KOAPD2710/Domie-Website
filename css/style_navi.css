@@ -1,0 +1,81 @@
+#navi{
+	position: relative;
+	display: flex;
+	padding-top: 20px;
+	background-color: white;
+}
+#navi a{
+	text-decoration: none;
+}
+#navi .navlogo, #navi .navicon{
+	position: relative;
+	display: block;
+	width: 15vw;
+	max-width: 200px;
+	min-width: 160px;
+}
+#navi .navlogo a{
+	position: relative;
+	display: inline-block;
+}
+#navi .navlogo img{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#navi .navicon a svg{
+	stroke: #444;
+	stroke-width: 2.6px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	fill: none;
+}
+#navi .navlink, #navi .navicon{
+	padding-top: 10px;
+}
+#navi .navlink{
+	position: relative;
+	display: block;
+	width: 100%;
+}
+#navi .navlink ul{
+	position: relative;
+	display: flex;
+	list-style: none;
+	width: 50%;
+	max-width: 600px;
+	min-width: 450px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+	padding: 0px;
+	height: 100%;
+}
+#navi .navlink ul li{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+#navi .navlink ul li a{
+	text-align: center;
+	vertical-align: middle;
+	color: var(--g1);
+	font-weight: bold;
+}
+#navi .navlink ul li a p{
+	margin: 0px;
+}
+#navi .navlink ul li a:after{
+	content: "";
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 5px;
+	border-radius: 50px;
+	background: var(--gra-mid);
+	background-size: 100%;
+	background-position: center;
+	background-origin: left;
+	
+}
