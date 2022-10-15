@@ -1,12 +1,14 @@
 :root{
+	--w: #fff;
 	--g1: #444444;
 	--g2: #B7B7B7;
 	--c1: #FF96A2;
 	--c2: #F47595;
 	--c3: #B15A9A;
 	--c4: #494BA2;
-	--gra-full: linear-gradient(to right, #494BA2 -1%, #B15A9A 34%, #F47595 68%, #FF96A2 101%);
-	--gra-mid: linear-gradient(to right, #B15A9A 0%, #F47595 50%, #FF96A2 101%);
+	--gra-full1: linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FF96A3 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
+	--gra-full2: linear-gradient(to bottom,#289672 -1%, #93D9A3 8%, #FFF7BC 50%, #93D9A3 92%,#289672 101%);
+	
 }
 
 button*{
@@ -24,10 +26,17 @@ body{
 	box-sizing: border-box;
 	color: black;
 	background-color: white;
-
+	z-index: 100;
 }
 
 .break{
-	padding-left: 5%;
-	padding-right: 5%;
+	padding-left: 5vw;
+	padding-right: 5vw;
+}
+.test{
+	height: 200vh;
+}
+.testnavi{
+	height: 65px;
+	background-color: skyblue;
 }

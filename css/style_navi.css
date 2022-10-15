@@ -2,7 +2,12 @@
 	position: relative;
 	display: flex;
 	padding-top: 20px;
-	background-color: white;
+	background: var(--gra-full);
+	z-index: 10000;
+	top: 0;
+	transition-property: top;
+	transition-duration: 1.5s;
+	transition-timing-function: ease-in-out;
 }
 #navi a{
 	text-decoration: none;
@@ -22,16 +27,51 @@
 	position: relative;
 	display: block;
 	width: 100%;
+	max-width: 120px;
 	height: auto;
 }
+#navi .navicon ul{
+	position: relative;
+	display: flex;
+	list-style: none;
+	margin: 0px;
+}
+#navi .navicon a{
+	position: relative;
+	display: inline-block;
+}
 #navi .navicon a svg{
-	stroke: #444;
-	stroke-width: 2.6px;
+	position: relative;
+	stroke: white;
+	stroke-width: 2.2px;
 	stroke-linejoin: round;
 	stroke-linecap: round;
 	fill: none;
 }
-#navi .navlink, #navi .navicon{
+#navi .navicon .sign{
+	margin-left: auto;
+	margin-right: 30px;
+}
+#navi .navicon .cart span{
+	position: absolute;
+	display: block;
+	top: -4px;
+	right: -5px;
+	border-radius: 50px;
+	background: white;
+	height: 16px;
+	width: 16px;
+	text-align: center;
+
+}
+#navi .navicon .cart span p{
+	color: var(--c3);
+	font-size: 12px;
+	padding-top: 0.5px;
+	margin: 0px;
+}
+
+#navi .navlink ul li, #navi .navicon ul li{
 	padding-top: 10px;
 }
 #navi .navlink{
@@ -44,8 +84,8 @@
 	display: flex;
 	list-style: none;
 	width: 50%;
-	max-width: 600px;
-	min-width: 450px;
+	max-width: 550px;
+	min-width: 400px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 0px;
@@ -60,8 +100,9 @@
 #navi .navlink ul li a{
 	text-align: center;
 	vertical-align: middle;
-	color: var(--g1);
+	color: white;
 	font-weight: bold;
+	transition: all ease-in .4s;
 }
 #navi .navlink ul li a p{
 	margin: 0px;
@@ -70,12 +111,18 @@
 	content: "";
 	position: relative;
 	display: block;
+	width: 0%;
+	height: 4px;
+	margin: auto;
+	border-radius: 500px;
+	background: white;
+	transition: all .4s ease-in ;
+}
+#navi .navlink ul li a:hover{
+	transition: all .4s ease-out;
+}
+#navi .navlink ul li a:hover:after{
 	width: 100%;
-	height: 5px;
-	border-radius: 50px;
-	background: var(--gra-mid);
-	background-size: 100%;
-	background-position: center;
-	background-origin: left;
-	
+	height: 4.5px;
+	transition: all .4s ease ;
 }

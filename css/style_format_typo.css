@@ -24,6 +24,14 @@
 	font-style: normal;
 	font-weight: 800;
 }
+@font-face{
+	font-family: Fonth;
+	src:	url(../fonts/Gluten-Bold.ttf),
+			url(../fonts/Gluten-Bold.otf),
+			url(../fonts/Gluten-Bold.woff);
+	font-style: normal;
+	font-weight: normal;
+}
 
 h1{
 	font-size: 7.625rem;
@@ -56,7 +64,7 @@ h6{
 }
 
 p{
-	font-size: 1.25rem;
+	font-size: 1rem;
 	letter-spacing: .5px;
 }
 

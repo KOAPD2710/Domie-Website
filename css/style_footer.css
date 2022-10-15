@@ -1,0 +1,292 @@
+.boy{
+	position: relative;
+	width: 100%;
+	height: 200vh;
+	background-color: greenyellow;
+	z-index: 100;
+}
+.under{
+	position: relative;
+	width: 100%;
+	height: 770px;
+	background-color: transparent;
+	pointer-events: none;
+	z-index: 100;
+}
+#footerformat{
+	position: fixed;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+}
+#footer{
+	position: relative;
+	display: flex;
+	padding-top: 100px;
+}
+#footer .footerlink{
+	position: relative;
+	display: block;
+	width: 15%;
+	min-width: 200px;
+	text-align: center;
+	padding-top: 40px;
+}
+#footer .footerlink h5{
+	margin: 5px 15px;
+}
+#footer .footerlink ul{
+	list-style: none;
+	padding: 0px;
+}
+#footer .footerlink ul li{
+	position: relative;
+	padding: 6px 0px;
+}
+#footer .footerlink a{
+	position: relative;
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	margin-top: 7px;
+}
+#footer .footerlink a:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	border-radius: 10px;
+	background-color: black;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s ease;
+}
+#footer .footerlink a:hover:after{
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform .4s ease;
+}
+#footer .footerlink .hr{
+	position: relative;
+	display: block;
+	width: 80%;
+	height: 3px;
+	margin: auto;
+	margin-bottom: 8px;
+	border-radius: 100px;
+	background-color: black;
+}
+#footer .footerlink h5:first-letter{
+	text-transform: uppercase;
+}
+#footer .footerlink ul li a:first-letter{
+	text-transform: uppercase;
+}
+#footer .subscribe{
+	position: relative;
+	display: block;
+	margin: auto;
+	text-align: center;
+	width: 65%;
+	padding: 0px 30px;
+}
+#footer .subscribe h3{
+	font-weight: bold;
+}
+#footer .subscribe p span{
+	white-space: nowrap;
+}
+#footer .subscribe .inputwidth{
+	position: relative;
+	display: inline-block;
+}
+#footer .subscribe .inputwidth p{
+	position: relative;
+	display: block;
+	padding: 0px 60px;
+	margin-top: 20px;
+}
+#footer .subscribe .inputwidth p span{
+	position: relative;
+	display: block;
+	white-space: nowrap;
+}
+#footer .subscribe .inputform{
+	position: relative;
+	display: flex;
+	margin-top: 40px;
+}
+#footer .subscribe .inputform input{
+	position: relative;
+	display: block;
+	width: 100%;
+	font-size: 20px;
+	outline: none;
+	border: none;
+	padding-left: 20px;
+}
+#footer .subscribe .inputform input::placeholder{
+	color: black;
+	opacity: .5;
+}
+#footer .subscribe .inputform button{
+	position: relative;
+	display: block;
+	font-size: 20px;
+	white-space: nowrap;
+	background: white;
+	border: none;
+	height: 50px;
+	padding-right: 20px;
+	cursor: pointer;
+	transition: all .2s ease-out;
+}
+#footer .subscribe .inputwidth .hr{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	border-radius: 100px;
+}
+#footer .subscribe .inputform input:hover::placeholder{
+	opacity: .8;
+}
+#footer .subscribe .inputform button:hover{
+	transform: scale(1.1);
+	transition: all .2s ease;
+}
+#footer .subscribe .socialmethod{
+	position: relative;
+	display: block;
+	margin-top: 30px;
+}
+#footer .subscribe .socialmethod p{
+	margin-bottom: 30px;
+}
+#footer .subscribe .socialmethod ul{
+	position: relative;
+	display: inline-flex;
+	text-align: center;
+	list-style: none;
+	margin: auto;
+	padding: 0px;
+}
+#footer .subscribe .socialmethod ul li{
+	width: 40px;
+	margin: 0px 10px;
+}
+#footer .subscribe .socialmethod ul li a{
+	color: black;
+	font-size: 30px;
+}
+#footer .subscribe .socialmethod ul li a:hover svg{
+	transform: scale(1.1);
+}
+#policy{
+	position: relative;
+	display: block;
+	margin-top: 100px;
+	text-align: center;
+	padding-bottom: 100px;
+}
+#policy .hr{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 2px;
+	border-radius: 10px;
+	background-color: black;
+	margin-bottom: 40px;
+}
+#policy p{
+	position: relative;
+	display: inline-block;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+#policy a{
+	position: relative;
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+}
+#policy a:after{
+	content: "";
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 100%;
+	height: 1px;
+	border-radius: 10px;
+	background-color: black;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform .4s ease;
+}
+#policy a:hover:after{
+	transform: scaleX(1);
+	transform-origin: left;
+	transition: transform .4s ease;
+}
+#policy:hover span{
+	color: white;
+}
+
+
+@media(min-width: 992px) and (max-width: 1100px){
+	#footer .subscribe .inputwidth p{
+		padding: 0px 40px;
+	}
+	#footer .subscribe .inputwidth p span{
+		display: inline-block;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

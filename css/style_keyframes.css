@@ -1,0 +1,11 @@
+@keyframes translateY{
+	0%{
+		transform: translateY(0px);
+	}
+	40%{
+		transform: translateY(-120px);
+	}
+	100%{
+		transform: translateY(-100px);
+	}
+}
