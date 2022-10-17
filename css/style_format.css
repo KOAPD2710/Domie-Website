@@ -7,7 +7,16 @@
 	--c3: #B15A9A;
 	--c4: #494BA2;
 	--gra-full1: linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FF96A3 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
-	--gra-full2: linear-gradient(to bottom,#289672 -1%, #93D9A3 8%, #FFF7BC 50%, #93D9A3 92%,#289672 101%);
+	--gra-full2: linear-gradient(to bottom,#FF9234 -1%, #FFB677 1%, #FFEBBB 9%, #FFEBBB 65%, #FFB677 99%,#FF9234 101%);
+	--gra-full3: linear-gradient(to bottom,#EEE626 -1%, #EDED5E 1%, #EEF5DD 9%, #EEF5DD 65%, #EDED5E 99%,#EEE626 101%);
+	--gra-full4: linear-gradient(to bottom,#289672 -1%, #93D9A3 1%, #FFF7BC 9%, #FFF7BC 65%, #93D9A3 99%,#289672 101%);
+	--gra-full5: linear-gradient(to bottom,#26BAEE -1%, #5FDDE5 1%, #DDF3F5 9%, #DDF3F5 65%, #5FDDE5 99%,#26BAEE 101%);
+	--gra-full6: linear-gradient(to bottom,#465CA6 -1%, #6984DB 1%, #CDF9FF 9%, #CDF9FF 65%, #6984DB 99%,#465CA6 101%);
+	--gra-full7: linear-gradient(to bottom,#854090 -1%, #B762C1 1%, #FFCDDD 9%, #FFCDDD 65%, #B762C1 99%,#854090 101%);
+
+
+
+
 	
 }
 
@@ -27,6 +36,13 @@ body{
 	color: black;
 	background-color: white;
 	z-index: 100;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll;
+
+}
+body::-webkit-scrollbar{
+	display: none;
 }
 
 .break{

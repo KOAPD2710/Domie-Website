@@ -46,6 +46,7 @@
 	<script type="text/javascript" src="js/bootstrap.js"></script>
 	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
 	<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="js/element-queries.js"></script>
 
 	<link rel="stylesheet" type="text/css" href="css/style_format.css">
 	<link rel="stylesheet" type="text/css" href="css/style_format_typo.css">
@@ -59,113 +60,240 @@
 </head>
 <body>
 	<div class="bodygradient">
-		<div w3-include-html="navi.html"></div>
-
-
-		<div class="carouselitem">
-			<div class="owl-one owl-carousel owl-theme">
-				<div class="wrap bg1" name="--gra-full1">
-					<a href="products-detail.html">
-						<img src="img/prod/l6.webp">
-						<span class="word">
-							<span class="char char1">b</span>
-							<span class="char char2">e</span>
-							<span class="char char3">e</span>
-							<span class="char char4">r</span>
-							<h1>BEER</h1>
-						</span>
+		<!--
+		<div w3-include-html="navi.html"></div>-->
+		<div class="d-lg-flex d-none">
+			<div class="container-fluid break" id="navi">
+				<div class="navlogo mr-auto">
+					<a href="index.html">
+						<img src="img/logow.png">
 					</a>
 				</div>
-				<div class="wrap bg2" name="--gra-full2">
-					<a href="products-detail.html">
-						<img src="img/prod/s9.webp">
-						<span class="word">
-							<span class="char char1">s</span>
-							<span class="char char2">l</span>
-							<span class="char char3">o</span>
-							<span class="char char4">t</span>
-							<span class="char char5">h</span>
-							<h1>SLOTH</h1>
-						</span>
-					</a>
+				<div class="navlink">
+					<ul>
+						<li class="active">
+							<a href="products.html">
+								<p>Socks</p>
+							</a>
+						</li>
+						<li class="">
+							<a href="gifts.html">
+								<p>Gifts</p>
+							</a>
+						</li>
+						<li class="">
+							<a href="blogs.html">
+								<p>Blogs</p>
+							</a>
+						</li>
+						<li class="">
+							<a href="about.html">
+								<p>About</p>
+							</a>
+						</li>
+					</ul>
 				</div>
-				<div class="wrap bg3">
-					<a href="products-detail.html">
-						<img src="img/prod/l16.webp">
-						<span class="word">
-							<span class="char char1">f</span>
-							<span class="char char2">i</span>
-							<span class="char char3">s</span>
-							<span class="char char4">h</span>
-							<h1>FISH</h1>
-						</span>
-					</a>
-				</div>
-				<div class="wrap bg4">
-					<a href="products-detail.html">
-						<img src="img/prod/f9.webp">
-						<span class="word">
-							<span class="char char1">s</span>
-							<span class="char char2">l</span>
-							<span class="char char3">o</span>
-							<span class="char char4">t</span>
-							<span class="char char5">h</span>
-							<h1>PIGGY</h1>
-						</span>
-					</a>
-				</div>
-				<div class="wrap bg5">
-					<a href="products-detail.html">
-						<img src="img/prod/s7.webp">
-						<span class="word">
-							<span class="char char1">s</span>
-							<span class="char char2">a</span>
-							<span class="char char3">w</span>
-							<h1>SAW</h1>
-						</span>
-					</a>
-				</div>
-				<div class="wrap bg6">
-					<a href="products-detail.html">
-						<img src="img/prod/l24.webp">
-						<span class="word">
-							<span class="char char1">v</span>
-							<span class="char char2">i</span>
-							<span class="char char3">n</span>
-							<span class="char char4">c</span>
-							<span class="char char5">e</span>
-							<span class="char char6">n</span>
-							<span class="char char7">t</span>
-							<h1>VINCENT</h1>
-						</span>
-					</a>
+				<div class="navicon ml-auto">
+					<ul>
+						<li class="sign">
+							<a href="sign.html">
+								<svg width="27" height="27" viewBox="0 0 24 24">
+									<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+									<circle cx="12" cy="7" r="4"></circle>
+								</svg>
+							</a>
+						</li>
+						<li class="cart">
+							<a href="car.html">
+								<svg width="27" height="27" viewBox="0 0 24 24">
+									<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+									<line x1="3" y1="6" x2="21" y2="6"></line>
+									<path d="M16 10a4 4 0 0 1-8 0"></path>
+								</svg>
+								<span><p>3</p></span>
+							</a>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<script type="text/javascript">
-				$('.owl-one').owlCarousel({
-					center:true,
-					loop: true,
-					nav: false,
-					dots: false,
-					items: 3,
-					smartSpeed: 400,
-					mouseDrag: false,
-					touchDrag: false,
-				});
+		</div>
+		<!--Navi-->
 
-				var owlone = $('.owl-one');
-				owlone.owlCarousel();
-				$('.owl-one .owl-item').click(function(val) {      
-					if( $(this).next().hasClass('center') ){
-						// scroll to prev
-						owlone.trigger('prev.owl.carousel');
-					};
-					if( $(this).prev().hasClass('center') ){
-						// scroll to next
-						owlone.trigger('next.owl.carousel');
-					};
-				});
-			</script><!--Owl-one Carousel Setting-->
+		<div class="carouselcontainer">
+			<div class="carouselitem">
+				<div class="owl-one owl-carousel owl-theme">
+					<div class="wrap bg1" color-bg="var(--gra-full1)">
+						<a href="products-detail.html">
+							<img src="img/prod/l6.webp">
+						</a>
+					</div>
+					<div class="wrap bg2" color-bg="var(--gra-full2)">
+						<a href="products-detail.html">
+							<img src="img/prod/s9.webp">
+						</a>
+					</div>
+					<div class="wrap bg3" color-bg="var(--gra-full3)">
+						<a href="products-detail.html">
+							<img src="img/prod/l16.webp">
+						</a>
+					</div>
+					<div class="wrap bg4" color-bg="var(--gra-full4)">
+						<a href="products-detail.html">
+							<img src="img/prod/f9.webp">
+						</a>
+					</div>
+					<div class="wrap bg5" color-bg="var(--gra-full5)">
+						<a href="products-detail.html">
+							<img src="img/prod/s7.webp">
+						</a>
+					</div>
+					<div class="wrap bg6" color-bg="var(--gra-full6)">
+						<a href="products-detail.html">
+							<img src="img/prod/l24.webp">
+						</a>
+					</div>
+					<div class="wrap bg7" color-bg="var(--gra-full7)">
+						<a href="products-detail.html">
+							<img src="img/prod/l3.webp">
+						</a>
+					</div>
+				</div>
+				<div class="owl-two owl-carousel owl-theme charactor">
+					<span class="word bg1">
+						<span class="char char1">b</span>
+						<span class="char char2">e</span>
+						<span class="char char3">e</span>
+						<span class="char char4">r</span>
+						<h1>BEER</h1>
+					</span>
+					<span class="word bg2">
+						<span class="char char1">s</span>
+						<span class="char char2">l</span>
+						<span class="char char3">o</span>
+						<span class="char char4">t</span>
+						<span class="char char5">h</span>
+						<h1>SLOTH</h1>
+					</span>
+					<span class="word bg3">
+						<span class="char char1">f</span>
+						<span class="char char2">i</span>
+						<span class="char char3">s</span>
+						<span class="char char4">h</span>
+						<h1>FISH</h1>
+					</span>
+					<span class="word bg4">
+						<span class="char char1">p</span>
+						<span class="char char2">i</span>
+						<span class="char char3">g</span>
+						<span class="char char4">g</span>
+						<span class="char char5">y</span>
+						<h1>PIGGY</h1>
+					</span>
+					<span class="word bg5">
+						<span class="char char1">s</span>
+						<span class="char char2">a</span>
+						<span class="char char3">w</span>
+						<h1>SAW</h1>
+					</span>
+					<span class="word bg6">
+						<span class="char char1">v</span>
+						<span class="char char2">i</span>
+						<span class="char char3">n</span>
+						<span class="char char4">c</span>
+						<span class="char char5">e</span>
+						<span class="char char6">n</span>
+						<span class="char char7">t</span>
+						<h1>VINCENT</h1>
+					</span>
+					<span class="word bg7">
+						<span class="char char1">l</span>
+						<span class="char char2">i</span>
+						<span class="char char3">m</span>
+						<span class="char char4">e</span>
+						<h1>LIME</h1>
+					</span>
+				</div>
+				<div class="carousel-owl-nav d-sm-none d-flex">
+					<span class="navbtn mr-auto" id="prev-button">
+						<svg id="iconnav" viewBox="5 0 25 25">
+							<path d="M10.957,12.354a.5.5,0,0,1,0-.708l4.586-4.585a1.5,1.5,0,0,0-2.121-2.122L8.836,9.525a3.505,3.505,0,0,0,0,4.95l4.586,4.586a1.5,1.5,0,0,0,2.121-2.122Z"/>
+						</svg>
+					</span>
+					<span class="navbtn ml-auto" id="next-button">
+						<svg id="iconnav" viewBox="-5 0 25 25">
+							<path d="M15.75,9.525,11.164,4.939A1.5,1.5,0,0,0,9.043,7.061l4.586,4.585a.5.5,0,0,1,0,.708L9.043,16.939a1.5,1.5,0,0,0,2.121,2.122l4.586-4.586A3.505,3.505,0,0,0,15.75,9.525Z"/>
+						</svg>
+					</span>
+				</div>
+				<script type="text/javascript">
+					$('.owl-one').owlCarousel({
+						center:true,
+						loop: true,
+						nav: false,
+						dots: false,
+						items: 3,
+						smartSpeed: 400,
+						mouseDrag: false,
+						touchDrag: false,
+						responsiveClass:true,
+						responsive:{
+							0:{
+								items:1,
+							},
+							576:{
+								items:2,
+							},
+							991:{
+								items:3,
+							},
+						},
+					});
+
+					$('.owl-two').owlCarousel({
+						center:true,
+						loop: true,
+						nav: false,
+						dots: false,
+						items: 1,
+						smartSpeed: 400,
+						mouseDrag: false,
+						touchDrag: false,
+					});
+
+					var owlone = $('.owl-one');
+					var owltwo = $('.owl-two');
+					
+					owlone.owlCarousel();
+					owltwo.owlCarousel();
+					$('.owl-one .owl-item').click(function(val) {
+
+						if( $(this).next().hasClass('center') ){
+							// scroll to prev
+							owlone.trigger('prev.owl.carousel');
+							owltwo.trigger('prev.owl.carousel');
+						};
+						if( $(this).prev().hasClass('center') ){
+							// scroll to next
+							owlone.trigger('next.owl.carousel');
+							owltwo.trigger('next.owl.carousel');
+						};
+					});
+
+					$(document).ready(function(){
+
+						$('#next-button').click(function() {
+							owlone.trigger('next.owl.carousel');
+							owltwo.trigger('next.owl.carousel');
+						});
+						$('#prev-button').click(function() {
+							owlone.trigger('prev.owl.carousel');
+							owltwo.trigger('prev.owl.carousel');
+						});
+					});
+				
+				</script><!--Owl-one Carousel Setting-->
+				<script type="text/javascript"></script>
+			</div>
 		</div>
 
 		<div class="container-fluid break" id="standard">
@@ -179,8 +307,8 @@
 		<div class="imgparallax">
 			
 		</div>
-
-		<div w3-include-html="footer.html"></div>
+		<!--
+		<div w3-include-html="footer.html"></div>-->
 	</div>
 </body>
 	<script type="text/javascript">

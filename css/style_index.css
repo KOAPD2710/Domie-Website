@@ -1,43 +1,70 @@
 .bodygradient{
+	width: 100%;
 	background: var(--gra-full1);
+	transition: all 1s ease-out;
+}
+.carouselcontainer{
+	position: relative;
+	display: block;
+	top: -95px;
+	height: 100vh;
+	align-items: center;
 }
 .carouselitem{
 	position: relative;
 	display: block;
-	height: 100vh;
+	align-items: center;
+	margin-top: auto !important;
+	margin-bottom: auto !important;
+	overflow: hidden;
 }
 .carouselitem .owl-one{
-	height: 100vh;
+	overflow-y: visible;
 }
-.carouselitem .owl-item{
+.carouselitem .owl-one .owl-stage-outer, .carouselitem .owl-stage{
 	position: relative;
-	overflow-x: visible;
 }
-.carouselitem .owl-item .wrap{
+.carouselitem .owl-one .owl-item{
+	position: relative;
+	overflow-y: visible;
+}
+.carouselitem .owl-one .owl-item .wrap{
+	position: relative;
+	display: flex;
 	width: 100%;
-	overflow-x: visible;
+	height: 100%;
+	overflow-y: visible;
 }
-.carouselitem .owl-item .wrap a img{
-	margin: auto;
-	margin-top: 55%;
-	width: 35%;
-	user-select: none;
-	transition: all .5s ease-in-out;
-	z-index: 100;
-}
-.carouselitem .owl-item .wrap a{
-	display: block;
+.carouselitem .owl-one .owl-item .wrap a{
+	display: flex;
 	pointer-events: none;
 	cursor: pointer;
+	user-select: none;
+	align-items: center;
+	height: 100vh;
+	overflow-y: visible;
 }
-.carouselitem .owl-item.center .wrap a{
+.carouselitem .owl-one .owl-item.center .wrap a{
 	pointer-events: auto;
 }
-.carouselitem .owl-item.active.center .wrap a img{
-	margin-top: 25%;
-	width: 80%;
+.carouselitem .owl-one .owl-item .wrap a img{
+	display: inline-flex;
+	margin: auto;
+	margin-top: auto;
+	margin-bottom: auto;
+	width: 35%;
+	height: auto;
 	user-select: none;
 	transition: all .5s ease-out;
+	z-index: 100;
+	overflow-wrap: normal;
+}
+.carouselitem .owl-one .owl-item.active.center .wrap a img{
+	width: 100%;
+	user-select: none;
+	transition: all .5s ease-out .12s;
+	user-select: none;
+	pointer-events: none;
 }
 .carouselitem h1{
 	display: none;
@@ -47,71 +74,114 @@
 .carouselitem a{
 	text-decoration: none;
 }
-.carouselitem .word{
+
+.carouselitem .charactor{
 	position: absolute;
-	top: 62%;
-	left: 0;
-	right: 0;
+	display: flex;
+	top: 00%;
+	width: 100%;
+	height: 100vh;
 	margin: auto;
-	display: inline-block;
-	text-transform: uppercase;
+	pointer-events: none;
+}
+.carouselitem .charactor .owl-item{
+	position: relative;
+	display: block;
+	height: 100vh;
+}
+.carouselitem .charactor .word{
+	position: absolute;
+	display: inline-flex;
+	color: white;
+	top: 50%;
+	right: 50%;
+	left: 50%;
+	bottom: 50%;
+	transform: translate(-50%, -50%);
+	margin: auto;
+	width: 100%;
 	font-family: Fonth;
+	text-transform: uppercase;
 	font-weight: bold;
 	font-size: 120px;
 	text-align: center;
-	width: 100%;
-	color: white;
 	vertical-align: baseline;
 	pointer-events: none;
 	visibility: hidden;
-	white-space: nowrap;
+	overflow: visible;
 	z-index: 200;
+	justify-content: center;
 }
-.carouselitem .word.active{
-	visibility: visible;
-}
-.carouselitem .word .char{
+.carouselitem .charactor .word .char{
 	position: relative;
 	display: inline-block;
 	visibility: hidden;
-	margin: 0px -13px;
-	opacity: 0;
 	user-select: none;
+	opacity: 0;
 	z-index: 200;
 }
-.carouselitem .owl-item.active.center .word span.char{
+.carouselitem .charactor .owl-item.active.center .word .char{
 	visibility: visible;
 	opacity: 1;
 	transform: translateY(-100px);
 }
-.carouselitem .owl-item.active.center .word span.char1{
-	animation: translateY .8s ease .1s;
-	transition: opacity .4s ease .1s;
-}
-.carouselitem .owl-item.active.center .word span.char2{
-	animation: translateY .8s ease .2s;
-	transition: opacity .4s ease .2s;
-}
-.carouselitem .owl-item.active.center .word span.char3{
-	animation: translateY .8s ease 0s;
-	transition: opacity .4s ease 0s;
-}
-.carouselitem .owl-item.active.center .word span.char4{
-	animation: translateY .8s ease .1s;
-	transition: opacity .4s ease .1s;
-}
-.carouselitem .owl-item.active.center .word span.char5{
+.carouselitem .charactor .owl-item.active.center .word .char1{
 	animation: translateY .8s ease .3s;
-	transition: opacity .4s ease .3s;
+	transition: opacity .1s ease .3s;
 }
-.carouselitem .owl-item.active.center .word span.char6{
+.carouselitem .charactor .owl-item.active.center .word .char2{
+	animation: translateY .8s ease .4s;
+	transition: opacity .1s ease .4s;
+}
+.carouselitem .charactor .owl-item.active.center .word .char3{
 	animation: translateY .8s ease .2s;
-	transition: opacity .4s ease .2s;
+	transition: opacity .1s ease .2s;
 }
-.carouselitem .owl-item.active.center .word span.char7{
-	animation: translateY .8s ease .1s;
-	transition: opacity .4s ease .1s;
+.carouselitem .charactor .owl-item.active.center .word .char4{
+	animation: translateY .8s ease .3s;
+	transition: opacity .1s ease .3s;
 }
+.carouselitem .charactor .owl-item.active.center .word .char5{
+	animation: translateY .8s ease .5s;
+	transition: opacity .1s ease .5s;
+}
+.carouselitem .charactor .owl-item.active.center .word .char6{
+	animation: translateY .8s ease .4s;
+	transition: opacity .1s ease .4s;
+}
+.carouselitem .charactor .owl-item.active.center .word .char7{
+	animation: translateY .8s ease .3s;
+	transition: opacity .1s ease .3s;
+}
+
+.carouselitem .carousel-owl-nav{
+	position: absolute;
+	display: flex;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	z-index: 300;
+	pointer-events: none;
+}
+.carouselitem .carousel-owl-nav .navbtn{
+	position: relative;
+	top: -10px;
+	bottom: 0;
+	margin-top: auto !important;
+	margin-bottom: auto !important;
+	pointer-events: auto;
+	cursor: pointer;
+	user-select: none;
+}
+.carouselitem .carousel-owl-nav .navbtn #iconnav{
+	width: 100px;
+	color: white;
+	fill: white;
+}
+
 
 
 #standard{
@@ -131,10 +201,14 @@
 
 
 
-
-
-
-
+@media (max-width: 576px){
+	.carouselitem .owl-item.active.center .wrap a img{
+		width: 80%;
+	}
+	.carouselitem .charactor .word{
+		font-size: 100px;
+	}
+}
 
 
 
