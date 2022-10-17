@@ -284,10 +284,14 @@
 						$('#next-button').click(function() {
 							owlone.trigger('next.owl.carousel');
 							owltwo.trigger('next.owl.carousel');
+							var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
+							$(".bodygradient").css("background" , $bgchangesm);
 						});
 						$('#prev-button').click(function() {
 							owlone.trigger('prev.owl.carousel');
 							owltwo.trigger('prev.owl.carousel');
+								var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
+								$(".bodygradient").css("background" , $bgchangesm);
 						});
 					});
 				
