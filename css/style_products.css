@@ -1,0 +1,23 @@
+#bordergradient{
+	background: var(--gra-full1);
+	padding: 30px;
+}
+#insideborder{
+	background: white;
+	border-radius: 30px;
+	padding-top: 2.5vw;
+	padding-bottom: 2.5vw;
+}
+.break{
+	padding-left: calc(10vw - 30px) !important;
+	padding-right: calc(10vw - 30px) !important;
+}
+#navi{
+	padding-top: 30px;
+}
+#navi .navlink ul li a{
+	color: var(--g1);
+}
+#navi .navlink ul li a:after{
+	background: ;
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Socks</title>
+	<link rel="shortcut icon" href="img/shortcut.png">
+
+	<script>
+		function includeHTML() {
+			var z, i, elmnt, file, xhttp;
+			/*loop through a collection of all HTML elements:*/
+			z = document.getElementsByTagName("*");
+			for (i = 0; i < z.length; i++) {
+			elmnt = z[i];
+			/*search for elements with a certain atrribute:*/
+			file = elmnt.getAttribute("w3-include-html");
+			if (file) {
+				/*make an HTTP request using the attribute value as the file name:*/
+				xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+				if (this.readyState == 4) {
+					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
+					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+					/*remove the attribute, and call this function once more:*/
+					elmnt.removeAttribute("w3-include-html");
+					includeHTML();
+					};
+				};
+				xhttp.open("GET", file, true);
+				xhttp.send();
+				/*exit the function:*/
+				return;
+				};
+			};
+		};</script>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+
+	<script type="text/javascript" src="js/all.js"></script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/popper.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+
+
+	<link rel="stylesheet" type="text/css" href="css/style_format.css">
+	<link rel="stylesheet" type="text/css" href="css/style_format_typo.css">
+	<link rel="stylesheet" type="text/css" href="css/style_navi.css">
+	<link rel="stylesheet" type="text/css" href="css/style_footer.css">
+	<link rel="stylesheet" type="text/css" href="css/style_index.css">
+	<link rel="stylesheet" type="text/css" href="css/style_keyframes.css">
+	<script type="text/javascript" src="js/js_index.js"></script>
+	
+
+	<link rel="stylesheet" type="text/css" href="css/style_products.css">
+	<script type="text/javascript" src="js/js_products.js"></script>
+
+</head>
+<body>
+
+	<div class="container-fluid" id="bordergradient">
+		<div class="container-fluid p-0" id="insideborder">
+			<div w3-include-html="naviprod.html"></div>
+			<div class="d-lg-flex d-none">
+				<div class="container-fluid break" id="navi">
+					<div class="navlogo mr-auto">
+						<a href="index.html">
+							<img src="img/logo.png">
+						</a>
+					</div>
+					<div class="navlink">
+						<ul>
+							<li class="active">
+								<a href="products.html">
+									<p>Socks</p>
+								</a>
+							</li>
+							<li class="">
+								<a href="gifts.html">
+									<p>Gifts</p>
+								</a>
+							</li>
+							<li class="">
+								<a href="blogs.html">
+									<p>Blogs</p>
+								</a>
+							</li>
+							<li class="">
+								<a href="about.html">
+									<p>About</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="navicon ml-auto">
+						<ul>
+							<li class="sign">
+								<a href="sign.html">
+									<svg width="27" height="27" viewBox="0 0 24 24">
+										<path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+										<circle cx="12" cy="7" r="4"></circle>
+									</svg>
+								</a>
+							</li>
+							<li class="cart">
+								<a href="cart.html">
+									<svg width="27" height="27" viewBox="0 0 24 24">
+										<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+										<line x1="3" y1="6" x2="21" y2="6"></line>
+										<path d="M16 10a4 4 0 0 1-8 0"></path>
+									</svg>
+									<span><p>3</p></span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<div class="body">
+				
+			</div>
+
+			<div w3-include-html="footerprod.html"></div>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		includeHTML();
+	</script>
+</body>
+</html>
+
+
+
