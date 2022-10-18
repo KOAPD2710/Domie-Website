@@ -1,11 +1,18 @@
 :root{
-	--w: #fff;
-	--g1: #444444;
-	--g2: #B7B7B7;
-	--c1: #FF96A2;
-	--c2: #F47595;
-	--c3: #B15A9A;
-	--c4: #494BA2;
+	--w: 	#fff;
+	--g1: 	#444444;
+	--g2: 	#B7B7B7;
+	--c1: 	#FF96A2;
+	--c2: 	#F47595;
+	--c3: 	#B15A9A;
+	--c4: 	#494BA2;
+	--c5: 	#C74F80;
+	--c6: 	#EA5C2B;
+	--c7: 	#F0A500;
+	--c8: 	#3D8361;
+	--c9: 	#0960BD;
+	--c10: 	#3D2C8D;
+	--c11: 	#93329E;
 	--gra-full1: linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FF96A3 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
 	--gra-full2: linear-gradient(to bottom,#C95501 -1%, #EA5C2B 1%, #FFBC80 9%, #FFBC80 65%, #EA5C2B 99%,#C95501 101%);
 	--gra-full3: linear-gradient(to bottom,#EA9C1B -1%, #F0A500 1%, #F3CF7A 9%, #F3CF7A 65%, #F0A500 99%,#EA9C1B 101%);

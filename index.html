@@ -122,37 +122,37 @@
 		<div class="carouselcontainer">
 			<div class="carouselitem">
 				<div class="owl-one owl-carousel owl-theme">
-					<div class="wrap bg1" color-bg="var(--gra-full1)">
+					<div class="wrap bg1" color-bg="var(--gra-full1)" color-cart="var(--c5">
 						<a href="products-detail.html">
 							<img src="img/prod/l6.webp">
 						</a>
 					</div>
-					<div class="wrap bg2" color-bg="var(--gra-full2)">
+					<div class="wrap bg2" color-bg="var(--gra-full2)" color-cart="var(--c6)">
 						<a href="products-detail.html">
 							<img src="img/prod/s9.webp">
 						</a>
 					</div>
-					<div class="wrap bg3" color-bg="var(--gra-full3)">
+					<div class="wrap bg3" color-bg="var(--gra-full3)" color-cart="var(--c7)">
 						<a href="products-detail.html">
 							<img src="img/prod/l16.webp">
 						</a>
 					</div>
-					<div class="wrap bg4" color-bg="var(--gra-full4)">
+					<div class="wrap bg4" color-bg="var(--gra-full4)" color-cart="var(--c8)">
 						<a href="products-detail.html">
 							<img src="img/prod/f9.webp">
 						</a>
 					</div>
-					<div class="wrap bg5" color-bg="var(--gra-full5)">
+					<div class="wrap bg5" color-bg="var(--gra-full5)" color-cart="var(--c9)">
 						<a href="products-detail.html">
 							<img src="img/prod/s7.webp">
 						</a>
 					</div>
-					<div class="wrap bg6" color-bg="var(--gra-full6)">
+					<div class="wrap bg6" color-bg="var(--gra-full6)" color-cart="var(--c10)">
 						<a href="products-detail.html">
 							<img src="img/prod/l24.webp">
 						</a>
 					</div>
-					<div class="wrap bg7" color-bg="var(--gra-full7)">
+					<div class="wrap bg7" color-bg="var(--gra-full7)" color-cart="var(--c11)">
 						<a href="products-detail.html">
 							<img src="img/prod/l3.webp">
 						</a>
@@ -265,17 +265,24 @@
 					
 					owlone.owlCarousel();
 					owltwo.owlCarousel();
+
+					
+
 					$('.owl-one .owl-item').click(function(val) {
 
 						if( $(this).next().hasClass('center') ){
 							// scroll to prev
 							owlone.trigger('prev.owl.carousel');
 							owltwo.trigger('prev.owl.carousel');
+							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							$("#navi .navicon .cart span p").css("color", $cartcolor);
 						};
 						if( $(this).prev().hasClass('center') ){
 							// scroll to next
 							owlone.trigger('next.owl.carousel');
 							owltwo.trigger('next.owl.carousel');
+							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							$("#navi .navicon .cart span p").css("color", $cartcolor);
 						};
 					});
 

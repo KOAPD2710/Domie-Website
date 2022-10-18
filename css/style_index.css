@@ -127,31 +127,31 @@
 }
 .carouselitem .charactor .owl-item.active.center .word .char1{
 	animation: translateY .8s ease .3s;
-	transition: opacity .1s ease .3s;
+	transition: opacity .1s ease .35s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char2{
 	animation: translateY .8s ease .4s;
-	transition: opacity .1s ease .4s;
+	transition: opacity .1s ease .45s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char3{
 	animation: translateY .8s ease .2s;
-	transition: opacity .1s ease .2s;
+	transition: opacity .1s ease .25s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char4{
 	animation: translateY .8s ease .3s;
-	transition: opacity .1s ease .3s;
+	transition: opacity .1s ease .35s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char5{
-	animation: translateY .8s ease .5s;
-	transition: opacity .1s ease .5s;
+	animation: translateY .8s ease .2s;
+	transition: opacity .1s ease .25s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char6{
 	animation: translateY .8s ease .4s;
-	transition: opacity .1s ease .4s;
+	transition: opacity .1s ease .45s;
 }
 .carouselitem .charactor .owl-item.active.center .word .char7{
 	animation: translateY .8s ease .3s;
-	transition: opacity .1s ease .3s;
+	transition: opacity .1s ease .35s;
 }
 
 .carouselitem .carousel-owl-nav{
