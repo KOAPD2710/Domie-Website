@@ -123,7 +123,6 @@
 .carouselitem .charactor .owl-item.active.center .word .char{
 	visibility: visible;
 	opacity: 1;
-	transform: translateY(-100px);
 }
 .carouselitem .charactor .owl-item.active.center .word .char1{
 	animation: translateY .8s ease .3s;

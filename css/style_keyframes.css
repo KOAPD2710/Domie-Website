@@ -1,13 +1,29 @@
 @keyframes translateY{
 	0%{
 		opacity: 0;
-		transform: translateY(0px);
+		transform: translateY(100px);
 	}
 	40%{
-		transform: translateY(-120px);
+		opacity: 1;
+		transform: translateY(-20px);
 	}
 	100%{
-		opacity: 1;
-		transform: translateY(-100px);
+		
+		transform: translateY(0px);
+	}
+}
+
+@keyframes btnactive{
+	0%{
+		background-size: 200% auto;
+		font-size: 100%;
+	}
+	50%{
+		background-size: 250% auto;
+		font-size: 90%;
+	}
+	100%{
+		background-size: 200% auto;
+		font-size: 100%;
 	}
 }

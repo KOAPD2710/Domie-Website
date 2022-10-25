@@ -3,7 +3,6 @@
 	src:	url(../fonts/JosefinSans-Regular.ttf),
 			url(../fonts/JosefinSans-Regular.otf),
 			url(../fonts/JosefinSans-Regular.woff);
-	font-style: normal;
 	font-weight: normal;
 }
 
@@ -12,7 +11,6 @@
 	src:	url(../fonts/JosefinSans-Bold.ttf),
 			url(../fonts/JosefinSans-Bold.otf),
 			url(../fonts/JosefinSans-Bold.woff);
-	font-style: normal;
 	font-weight: bold;
 }
 
@@ -21,7 +19,6 @@
 	src:	url(../fonts/JosefinSans-SemiBold.ttf),
 			url(../fonts/JosefinSans-SemiBold.otf),
 			url(../fonts/JosefinSans-SemiBold.woff);
-	font-style: normal;
 	font-weight: 800;
 }
 @font-face{
@@ -29,7 +26,6 @@
 	src:	url(../fonts/Gluten-Bold.ttf),
 			url(../fonts/Gluten-Bold.otf),
 			url(../fonts/Gluten-Bold.woff);
-	font-style: normal;
 	font-weight: normal;
 }
 

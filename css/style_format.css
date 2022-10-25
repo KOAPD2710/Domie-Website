@@ -1,5 +1,6 @@
 :root{
 	--w: 	#fff;
+	--g: 	#aaa;
 	--g1: 	#444;
 	--g2: 	#B7B7B7;
 	--c1: 	#FF96A2;
@@ -13,13 +14,18 @@
 	--c9: 	#0960BD;
 	--c10: 	#3D2C8D;
 	--c11: 	#93329E;
-	--gra-full1: linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FF96A3 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
-	--gra-full2: linear-gradient(to bottom,#C95501 -1%, #EA5C2B 1%, #FFBC80 9%, #FFBC80 65%, #EA5C2B 99%,#C95501 101%);
-	--gra-full3: linear-gradient(to bottom,#EA9C1B -1%, #F0A500 1%, #F3CF7A 9%, #F3CF7A 65%, #F0A500 99%,#EA9C1B 101%);
-	--gra-full4: linear-gradient(to bottom,#146356 -1%, #3D8361 1%, #A3DA8D 9%, #A3DA8D 65%, #3D8361 99%,#146356 101%);
-	--gra-full5: linear-gradient(to bottom,#193498 -1%, #0960BD 1%, #91CEFF 9%, #91CEFF 65%, #0960BD 99%,#193498 101%);
-	--gra-full6: linear-gradient(to bottom,#2A1A5E -1%, #3D2C8D 1%, #929EDB 9%, #929EDB 65%, #3D2C8D 99%,#2A1A5E 101%);
-	--gra-full7: linear-gradient(to bottom,#712B75 -1%, #93329E 1%, #D789D7 9%, #D789D7 65%, #93329E 99%,#712B75 101%);
+	--filter-l:	#E47C95;
+	--filter-q:	#B15A9A;
+	--filter-f:	#494BA2;
+	--gra-full1:	linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FF96A3 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
+	--gra-full2:	linear-gradient(to bottom,#C95501 -1%, #EA5C2B 1%, #FFBC80 9%, #FFBC80 65%, #EA5C2B 99%,#C95501 101%);
+	--gra-full3:	linear-gradient(to bottom,#EA9C1B -1%, #F0A500 1%, #F3CF7A 9%, #F3CF7A 65%, #F0A500 99%,#EA9C1B 101%);
+	--gra-full4:	linear-gradient(to bottom,#146356 -1%, #3D8361 1%, #A3DA8D 9%, #A3DA8D 65%, #3D8361 99%,#146356 101%);
+	--gra-full5:	linear-gradient(to bottom,#193498 -1%, #0960BD 1%, #91CEFF 9%, #91CEFF 65%, #0960BD 99%,#193498 101%);
+	--gra-full6:	linear-gradient(to bottom,#2A1A5E -1%, #3D2C8D 1%, #929EDB 9%, #929EDB 65%, #3D2C8D 99%,#2A1A5E 101%);
+	--gra-full7:	linear-gradient(to bottom,#440A67 -1%, #93329E 1%, #D789D7 9%, #D789D7 65%, #93329E 99%,#440A67 101%);
+	--gra-navi:		linear-gradient(to right, #c74f80, #ff96a2);
+	--gra-cta:		linear-gradient(to right,#494BA2 0%, #B15A9A 17%, #F47595 34%, #FF96A2 51%,#F47595 68%,#B15A9A 85%,#494BA2 100%);;
 
 }
 
@@ -49,8 +55,8 @@ body::-webkit-scrollbar{
 }
 
 .break{
-	padding-left: 5vw;
-	padding-right: 5vw;
+	padding-left: 10vw;
+	padding-right: 10vw;
 }
 .test{
 	height: 200vh;
@@ -58,4 +64,31 @@ body::-webkit-scrollbar{
 .testnavi{
 	height: 65px;
 	background-color: skyblue;
+}
+
+.btn1{
+	background: var(--gra-cta);
+	width: 230px;
+	padding: 22px 40px 15px 40px;
+	text-align: center;
+	align-items: center;
+	background-size: 200% auto;
+	color: #fff;
+	border: none;
+	outline: none;
+	border-radius: 200px;
+	cursor: pointer;
+	transition: background-position .5s ease-in-out;
+}
+.btn1:hover{
+	background-position: right center;
+	color: #fff;
+	text-decoration: none;
+	box-shadow: 0px 7px 15px rgba(0, 0, 0, .15);
+	transition: background-position .5s ease-in-out;
+}
+.btn1:focus{
+	animation: btnactive .7s ease-out;
+	outline: none;
+	border: none;
 }
