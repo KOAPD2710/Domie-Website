@@ -14,7 +14,7 @@
 	z-index: 100;
 }
 #footerformat{
-	position: fixed;
+	position: relative;
 	display: block;
 	bottom: 0;
 	left: 0;
@@ -48,7 +48,7 @@
 #footer .footerlink a{
 	position: relative;
 	display: inline-block;
-	color: black;
+	color: var(--g1);
 	text-decoration: none;
 	margin-top: 7px;
 }
@@ -63,7 +63,7 @@
 	width: 100%;
 	height: 1px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: var(--g1);
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform .4s ease;
@@ -81,7 +81,7 @@
 	margin: auto;
 	margin-bottom: 8px;
 	border-radius: 100px;
-	background-color: black;
+	background-color: var(--g1);
 }
 #footer .footerlink h5:first-letter{
 	text-transform: uppercase;
@@ -100,22 +100,19 @@
 #footer .subscribe h3{
 	font-weight: bold;
 }
-#footer .subscribe p span{
-	white-space: nowrap;
-}
 #footer .subscribe .inputwidth{
 	position: relative;
 	display: inline-block;
 }
 #footer .subscribe .inputwidth p{
 	position: relative;
-	display: block;
-	padding: 0px 60px;
+	display: inline-block;
+	padding: 0px 10%;
 	margin-top: 20px;
 }
 #footer .subscribe .inputwidth p span{
 	position: relative;
-	display: block;
+	display: inline-block;
 	white-space: nowrap;
 }
 #footer .subscribe .inputform{
@@ -133,7 +130,7 @@
 	padding-left: 20px;
 }
 #footer .subscribe .inputform input::placeholder{
-	color: black;
+	color: var(--g1);
 	opacity: .5;
 }
 #footer .subscribe .inputform button{
@@ -142,6 +139,7 @@
 	font-size: 20px;
 	white-space: nowrap;
 	background: white;
+	color: var(--g1);
 	border: none;
 	height: 50px;
 	padding-right: 20px;
@@ -153,7 +151,7 @@
 	display: block;
 	width: 100%;
 	height: 2px;
-	background-color: black;
+	background-color: var(--g1);
 	border-radius: 100px;
 }
 #footer .subscribe .inputform input:hover::placeholder{
@@ -184,7 +182,7 @@
 	margin: 0px 10px;
 }
 #footer .subscribe .socialmethod ul li a{
-	color: black;
+	color: var(--g1);
 	font-size: 30px;
 }
 #footer .subscribe .socialmethod ul li a:hover svg{
@@ -203,7 +201,7 @@
 	width: 100%;
 	height: 2px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: var(--g1);
 	margin-bottom: 40px;
 }
 #policy p{
@@ -215,7 +213,7 @@
 #policy a{
 	position: relative;
 	display: inline-block;
-	color: black;
+	color: var(--g1);
 	text-decoration: none;
 }
 #policy a:after{
@@ -229,7 +227,7 @@
 	width: 100%;
 	height: 1px;
 	border-radius: 10px;
-	background-color: black;
+	background-color: var(--g1);
 	transform: scaleX(0);
 	transform-origin: right;
 	transition: transform .4s ease;

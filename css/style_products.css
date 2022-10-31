@@ -1,4 +1,5 @@
 #bordergradient{
+	background-color: white;
 	background: var(--gra-full1);
 	padding: 30px;
 }
@@ -11,7 +12,8 @@
 	height: 100%;
 	z-index: 2;
 	opacity: 0;
-	transition: opacity .4s ease-in-out;
+	transition: opacity .4s ease-out;
+	background-color: white;
 }
 #bordergradient #bg-long{
 	background: var(--gra-full2);
@@ -212,14 +214,19 @@
 	position: relative;
 	font-weight: bold;
 	text-transform: uppercase;
+	font-size: 1.25rem;
+}
+#sockcontainer .sp-item .wrap p{
+	font-size: 1.15rem;
 }
 #sockcontainer .sp-item .wrap img{
 	display: block;
 	margin: auto;
-	background: linear-gradient(to top, transparent 0%, white 20%);
 	z-index: 200;
 	pointer-events: none;
 	transition: transform .5s ease-in;
+	filter: drop-shadow(6px 4px 10px rgba(0, 0, 0, .3));
+	-webkit-filter: drop-shadow(6px 4px 10px rgba(0, 0, 0, .3));
 }
 #sockcontainer .sp-item .wrap img:after{
 	content: "";
@@ -247,7 +254,9 @@
 }
 #sockcontainer .sp-item .wrap:hover img{
 	transform: translateY(-50px);
-	transition: transform .5s ease-out;
+	filter: drop-shadow(6px 4px 10px rgba(0, 0, 0, .4));
+	-webkit-filter: drop-shadow(6px 4px 10px rgba(0, 0, 0, .4));
+	transition: all .5s ease-out;
 }
 #sockcontainer .sp-item .wrap:hover .btn1{
 	transform: translateY(40px);

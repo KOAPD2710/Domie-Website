@@ -52,6 +52,11 @@
 #navi .navicon .sign{
 	margin-left: auto;
 	margin-right: 30px;
+	transform: translateX(0px);
+	transition: all .5s ease;
+}
+#navi .navicon .sign a:hover .circle{
+	animation: signhead 1s cubic-bezier(.33,0,.67,1);
 }
 #navi .navicon .cart span{
 	position: absolute;
@@ -63,6 +68,7 @@
 	height: 20px;
 	width: 20px;
 	text-align: center;
+	pointer-events: none;
 
 }
 #navi .navicon .cart span p{
@@ -70,6 +76,13 @@
 	font-size: 14px;
 	padding-top: 0.5px;
 	margin: 0px;
+}
+#navi .navicon .cart a:hover .oval{
+	transform-origin: center;
+	animation: cartoval 1s ease;
+}
+#navi .navicon .cart a:hover span{
+	animation: cartspan 1s ease;
 }
 
 #navi .navlink ul li, #navi .navicon ul li{
@@ -131,3 +144,352 @@
 	width: 100%;
 	height: 4.5px;
 }
+
+
+#navimobile{
+	position: relative;
+	display: flex;
+	padding-top: 10px;
+}
+#navimobile .logo{
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 30%;
+	max-width: 200px;
+	min-width: 150px;
+	margin-top: 10px;
+	z-index: 999999;
+}
+#navimobile .logo a{
+	position: relative;
+	display: inline-block;
+}
+#navimobile .logo img{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#navimobile .menu{
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 100%;
+	z-index: 9990;
+}
+#navimobile .menu label{
+	position: absolute;
+	display: block;
+	width: 34px;
+	height: 22px;
+	top: 50%;
+	margin: 0px;
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+#navimobile .menu input{
+	display: none;
+}
+#navimobile .menu .burger-container{
+	position: relative;
+	display: block;
+	width: 34px;
+	height: 22px;
+	overflow: hidden;
+	transition: all .5s cubic-bezier(.72,.48,.6,.99);
+	z-index: 9999;
+}
+#navimobile .menu .burger-container .burger{
+	position: relative;
+	display: block;
+	width: 34px;
+	height: 4px;
+	border-radius: 100px;
+	background-color: white;
+	margin: 0px;
+	margin-bottom: 5px;
+	transition: transform 1s cubic-bezier(.48,-0.48,.47,1.63);
+}
+#navimobile .menu .circletransform{
+	pointer-events: none;
+	position: absolute;
+	display: block;
+	top: 50%;
+	left: 50%;
+	width: 0px;
+	height: 0px;
+	border-radius: 1000000000px;
+	opacity: 1;
+	z-index: 9990;
+	background: url(../img/bgmenu.webp);
+	background-size: contain;
+	background-position: center;
+	transform: translate(-50%, -50%);
+	transition: all .5s cubic-bezier(.72,.48,.6,.99);
+	overflow: hidden;
+}
+#navimobile .menu .x-container{
+	position: relative;
+	display: block;
+	top: -50%;
+	left: 0;
+	transform: rotate(0deg) scale(0);
+	z-index: 9998;
+	transition: all .8s cubic-bezier(.58,.05,.35,.93);
+}
+#navimobile .menu .x-container .justx{
+	position: absolute;
+	display: block;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	width: 35px;
+	height: 5px;
+	border-radius: 100px;
+	transform-origin: center;
+	background: white;
+}
+#navimobile .menu .x-container .justx:nth-child(1){
+	transform: rotate(45deg);
+}
+#navimobile .menu .x-container .justx:nth-child(2){
+	transform: rotate(-45deg);
+}
+#navimobile .cart{
+	position: relative;
+	display: block;
+	width: 80px;
+	height: 100%;
+	z-index: 9980;
+}
+#navimobile .cart a{
+	position: absolute;
+	display: inline-block;
+	right: 0;
+	top: 52%;
+	transform: translateY(-50%);
+}
+#navimobile .cart a svg{
+	position: relative;
+	stroke: white;
+	stroke-width: 2.2px;
+	stroke-linejoin: round;
+	stroke-linecap: round;
+	fill: none;
+}
+#navimobile .cart span{
+	position: absolute;
+	display: block;
+	top: -7px;
+	right: -7px;
+	border-radius: 50px;
+	background: white;
+	height: 20px;
+	width: 20px;
+	text-align: center;
+	pointer-events: none;
+
+}
+#navimobile .cart span p{
+	color: var(--c3);
+	font-size: 14px;
+	padding-top: 0.5px;
+	margin: 0px;
+}
+#navimobile .cart a:hover .oval{
+	transform-origin: center;
+	animation: cartoval 1s ease;
+}
+#navimobile .cart a:hover span{
+	animation: cartspan 1s ease;
+}
+#menucontainer{
+	position: absolute;
+	display: block;
+	top: -5vh;
+	left: -10vw;
+	width: 100vw;
+	height: 110vh;
+	text-align: center;
+	pointer-events: none;
+	background: linear-gradient(to bottom, #B84A80 5%, #FFBC80 110%);
+	opacity: 0;
+	z-index: 9998;
+	overflow: hidden;
+	transition: opacity .3s ease-in-out 0s;
+}
+#menucontainer ul{
+	position: relative;
+	display: inline-block;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	padding-top: 30vh;
+	z-index: 9999;
+}
+#menucontainer ul li{
+	align-self: center;
+	transform: translateY(50px);
+	opacity: 0;
+	margin-bottom: 2%;
+	transition: all .3s ease calc((var(--i)*.05s));
+	pointer-events: none;
+}
+#menucontainer ul li a{
+	position: relative;
+	display: inline-block;
+	color: var(--g1);
+	text-decoration: none;
+	fill: none;
+	color: transparent;
+	text-stroke: 1.5px white;
+	-webkit-text-stroke: 1.5px white;
+	-webkit-text-stroke-color: white;
+	pointer-events: none;
+}
+#menucontainer ul li a p{
+	text-transform: uppercase;
+	font-size: 36px;
+	font-weight: 800;
+
+}
+#menucontainer ul li a:hover p{
+	transform: scale(1.1);
+	font-weight: bold;
+	filter: drop-shadow(0px 0px 5px white);
+	color: white;
+}
+#menucontainer img{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+#menucontainer .cirleicon{
+	position: relative;
+	display: block;
+	margin-top: 10%;
+	margin-left: auto;
+	margin-right: 20vw;
+	width: 150px;
+	pointer-events: auto;
+}
+#menucontainer .cirleicon img{
+	position: absolute;
+	transition: all .2s ease;
+}
+#menucontainer .cirleicon img:nth-child(1){
+	animation: spinsocks 10s linear infinite;
+}
+#menucontainer .cloud img{
+	position: absolute;
+}
+#menucontainer .cloud{
+	position: absolute;
+	display: block;
+	width: 80%;
+}
+#menucontainer .cloud1{
+	top: 10%;
+	right: -100%;
+	transition: all 0s cubic-bezier(0,.44,.64,-0.21) .5s;
+}
+#menucontainer .cloud1 img{
+	width: 80%;
+	margin: auto;
+}
+#menucontainer .cloud2{
+	bottom: 20%;
+	left: -100%;
+	transform: rotate(180deg);
+	transition: all 0s cubic-bezier(0,.44,.64,-0.21) .5s;
+}
+
+#navimobile .menu .burger-container:hover .burger{
+	transform: translateY(-27px);
+}
+#navimobile .menu label:hover .x-container .justx{
+}
+#navimobile .menu .cirleicon:hover img:nth-child(2){
+	filter: drop-shadow(0px 0px 5px white);
+	transition: all .2s ease;
+}
+#navimobile .menu input:checked ~ #menucontainer .cloud1{
+	right: -30%;
+	transition: all 1.5s cubic-bezier(.4,.01,.76,.94) 0s;
+}
+#navimobile .menu input:checked ~ #menucontainer .cloud2{
+	left: -40%;
+	transition: all 1.2s cubic-bezier(.4,.01,.76,.94) 0.3s;
+}
+#navimobile .menu input:checked ~ .burger-container{
+	transform: rotate(360deg) scale(0);
+}
+#navimobile .menu input:checked ~ .circletransform{
+	width: 300vh;
+	height: 300vh;
+	transition: all .5s cubic-bezier(.47,.2,.41,.77);
+}
+#navimobile .menu input:checked ~ .x-container{
+	transform: rotate(720deg) scale(1);
+	transform-origin: center;
+	transition: all .8s cubic-bezier(0,.41,.07,1.18);
+}
+#navimobile .menu input:checked ~ #menucontainer{
+	opacity: 1;
+	transition: opacity .8s ease-out .5s;
+}
+#navimobile .menu input:checked ~ #menucontainer ul li{
+	transform: translateY(0px);
+	opacity: 1;
+	transition: all .4s ease-out calc((var(--i)*.1s) + .6s);
+}
+#navimobile .menu input:checked ~ #menucontainer ul li a{
+	pointer-events: auto;
+}
+@media (max-width: 576px){
+	#menucontainer{
+		top: ;
+		left: -30px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
