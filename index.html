@@ -52,6 +52,7 @@
 	<link rel="stylesheet" type="text/css" href="css/style_format_typo.css">
 	<link rel="stylesheet" type="text/css" href="css/style_navi.css">
 	<link rel="stylesheet" type="text/css" href="css/style_footer.css">
+	<link rel="stylesheet" type="text/css" href="css/format_break.css">
 	<link rel="stylesheet" type="text/css" href="css/style_index.css">
 	<link rel="stylesheet" type="text/css" href="css/style_keyframes.css">
 	<script type="text/javascript" src="js/js_index.js"></script>
@@ -60,6 +61,141 @@
 
 </head>
 <body>
+	<div id="modalcart">
+		<div id="modalbg"></div>
+		<div id="cartcontainer">
+			<div class="closebtn">
+				<button>
+					<div>
+						<span></span>
+						<span></span>
+					</div>
+				</button>
+			</div>
+			<h4 class="yc">Your Cart</h4>
+
+			<div class="checkcart">
+				<div class="wrap">
+					<div class="img">
+						<img src="img/cloud1.webp" class="imgcloud">
+						<a href="products-detail.html">
+							<img src="img/prod/l17.webp" class="imgitem">
+						</a>
+					</div>
+					<div class="iteminfo">
+						<div class="first">
+							<a href="products-detail.html">
+								<p>BB QUE PARTY</p>
+							</a>
+							<button>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="second">
+							<p>Size 41 - 42</p>
+						</div>
+						<div class="third">
+							<div class="quantity">
+								<input class="minus is-form" type="button" value="-">
+								<input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number" value="1">
+								<input class="plus is-form" type="button" value="+">
+							</div>
+							<p class="hide">16.30</p>
+							<p class="sum">16.30</p>
+						</div>
+					</div>
+				</div>
+				<div class="wrap">
+					<div class="img">
+						<img src="img/cloud1.webp" class="imgcloud">
+						<a href="products-detail.html">
+							<img src="img/prod/l9.webp" class="imgitem">
+						</a>
+					</div>
+					<div class="iteminfo">
+						<div class="first">
+							<a href="products-detail.html">
+								<p>BB QUE PARTY</p>
+							</a>
+							<button>
+								<span></span>
+								<span></span>
+							</button>
+						</div>
+						<div class="second">
+							<p>Size 41 - 42</p>
+						</div>
+						<div class="third">
+							<div class="quantity">
+								<input class="minus is-form" type="button" value="-">
+								<input aria-label="quantity" class="input-qty" max="20" min="1" name="" type="number" value="1">
+								<input class="plus is-form" type="button" value="+">
+							</div>
+							<p class="hide">16.30</p>
+							<p class="sum">16.30</p>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="totaldiv">
+				<div class="deli">
+					<p>Delivery</p>
+					<p>4.75</p>
+				</div>
+				<div class="total">
+					<p>Total price</p>
+					<p class="totals-value" id="cart-total">36.33</p>
+				</div>
+				<div class="btndiv">
+					<button class="btn2">Continue</button>
+					<button class="btn1">Check Out</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="menucontainer">
+		<ul>
+			<li class="" style="--i:1">
+				<a href="products.html">
+					<p>Socks</p>
+				</a>
+			</li>
+			<li class="" style="--i:2">
+				<a href="gifts.html">
+					<p>Gifts</p>
+				</a>
+			</li>
+			<li class="" style="--i:3">
+				<a href="blogs.html">
+					<p>Blogs</p>
+				</a>
+			</li>
+			<li class="" style="--i:4">
+				<a href="about.html">
+					<p>About</p>
+				</a>
+			</li>
+			<li class="" style="--i:5">
+				<a href="sign.html">
+					<p>Account</p>
+				</a>
+			</li>
+		</ul>
+		<div class="cirleicon">
+			<img src="img/cirle.webp">
+			<img src="img/cirlesock.webp">
+		</div>
+		<div class="cloudcontainer" id="cloudcontainer">
+			<div class="cloud cloud1" data-depth="0.1">
+				<img src="img/cloud1.webp">
+			</div>
+			<div class="cloud cloud2" data-depth="0.2">
+				<img src="img/cloud3.webp">
+			</div>
+		</div>
+	</div>
 	<div class="bodygradient">
 		
 		<div w3-include-html="navi.html"></div>
@@ -105,7 +241,7 @@
 							</a>
 						</li>
 						<li class="cart">
-							<a href="cart.html">
+							<a>
 								<svg width="27" height="27" viewBox="0 0 24 24">
 									<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
 									<line class="line" x1="3" y1="6" x2="21" y2="6"></line>
@@ -124,45 +260,7 @@
 				<div class="menu">
 					<label for="menucheckbox">
 						<input type="checkbox" name="menu" id="menucheckbox">
-						<div id="menucontainer">
-							<ul>
-								<li class="" style="--i:1">
-									<a href="products.html">
-										<p>Socks</p>
-									</a>
-								</li>
-								<li class="" style="--i:2">
-									<a href="gifts.html">
-										<p>Gifts</p>
-									</a>
-								</li>
-								<li class="" style="--i:3">
-									<a href="blogs.html">
-										<p>Blogs</p>
-									</a>
-								</li>
-								<li class="" style="--i:4">
-									<a href="about.html">
-										<p>About</p>
-									</a>
-								</li>
-								<li class="" style="--i:5">
-									<a href="sign.html">
-										<p>Account</p>
-									</a>
-								</li>
-							</ul>
-							<div class="cirleicon">
-								<img src="img/cirle.webp">
-								<img src="img/cirlesock.webp">
-							</div>
-							<div class="cloud cloud1">
-								<img src="img/cloud1.webp">
-							</div>
-							<div class="cloud cloud2">
-								<img src="img/cloud3.webp">
-							</div>
-						</div>
+						
 						<div class="circletransform"></div>
 						<div class="burger-container">
 							<span class="burger"></span>
@@ -184,45 +282,54 @@
 						<img src="img/logow.png">
 					</a>
 				</div>
+				<div class="cart">
+					<a href="cart.html">
+						<svg width="32" height="32" viewBox="0 0 24 24">
+							<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+							<line class="line" x1="3" y1="6" x2="21" y2="6"></line>
+							<path class="oval" d="M16 10a4 4 0 0 1-8 0"></path>
+						</svg>
+						<span><p>3</p></span>
+					</a>
+				</div>
 			</div>
-
 		</div>
 		<!--Navi-->
 
 		<div class="carouselcontainer">
 			<div class="carouselitem">
 				<div class="owl-one owl-carousel owl-theme">
-					<div class="wrap bg1" color-bg="var(--gra-full1)" color-cart="var(--c5">
+					<div class="wrap bg1" color-bg="var(--gra-full1)" color-cart="var(--c5)" color-body="#B84A80">
 						<a href="products-detail.html">
 							<img src="img/prod/l6.webp">
 						</a>
 					</div>
-					<div class="wrap bg2" color-bg="var(--gra-full2)" color-cart="var(--c6)">
+					<div class="wrap bg2" color-bg="var(--gra-full2)" color-cart="var(--c6)" color-body="#C95501">
 						<a href="products-detail.html">
 							<img src="img/prod/s9.webp">
 						</a>
 					</div>
-					<div class="wrap bg3" color-bg="var(--gra-full3)" color-cart="var(--c7)">
+					<div class="wrap bg3" color-bg="var(--gra-full3)" color-cart="var(--c7)" color-body="#EA9C1B">
 						<a href="products-detail.html">
 							<img src="img/prod/l16.webp">
 						</a>
 					</div>
-					<div class="wrap bg4" color-bg="var(--gra-full4)" color-cart="var(--c8)">
+					<div class="wrap bg4" color-bg="var(--gra-full4)" color-cart="var(--c8)" color-body="#146356">
 						<a href="products-detail.html">
 							<img src="img/prod/f9.webp">
 						</a>
 					</div>
-					<div class="wrap bg5" color-bg="var(--gra-full5)" color-cart="var(--c9)">
+					<div class="wrap bg5" color-bg="var(--gra-full5)" color-cart="var(--c9)" color-body="#193498">
 						<a href="products-detail.html">
 							<img src="img/prod/s7.webp">
 						</a>
 					</div>
-					<div class="wrap bg6" color-bg="var(--gra-full6)" color-cart="var(--c10)">
+					<div class="wrap bg6" color-bg="var(--gra-full6)" color-cart="var(--c10)" color-body="#2A1A5E">
 						<a href="products-detail.html">
 							<img src="img/prod/l24.webp">
 						</a>
 					</div>
-					<div class="wrap bg7" color-bg="var(--gra-full7)" color-cart="var(--c11)">
+					<div class="wrap bg7" color-bg="var(--gra-full7)" color-cart="var(--c11)" color-body="#440A67">
 						<a href="products-detail.html">
 							<img src="img/prod/l3.webp">
 						</a>
@@ -345,14 +452,18 @@
 							owlone.trigger('prev.owl.carousel');
 							owltwo.trigger('prev.owl.carousel');
 							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
 							$("#navi .navicon .cart span p").css("color", $cartcolor);
+							$("body").css("background-color", $bodycolor);
 						};
 						if( $(this).prev().hasClass('center') ){
 							// scroll to next
 							owlone.trigger('next.owl.carousel');
 							owltwo.trigger('next.owl.carousel');
 							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
 							$("#navi .navicon .cart span p").css("color", $cartcolor);
+							$("body").css("background-color", $bodycolor);
 						};
 					});
 
@@ -362,13 +473,17 @@
 							owlone.trigger('next.owl.carousel');
 							owltwo.trigger('next.owl.carousel');
 							var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
+							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
 							$(".bodygradient").css("background" , $bgchangesm);
+							$("body").css("background-color", $bodycolor);
 						});
 						$('#prev-button').click(function() {
 							owlone.trigger('prev.owl.carousel');
 							owltwo.trigger('prev.owl.carousel');
-								var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
-								$(".bodygradient").css("background" , $bgchangesm);
+							var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
+							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
+							$(".bodygradient").css("background" , $bgchangesm);
+							$("body").css("background-color", $bodycolor);
 						});
 					});
 				

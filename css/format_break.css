@@ -1,0 +1,9 @@
+.break{
+	padding-left: calc(10vw - 30px);
+	padding-right: calc(10vw - 30px);
+}
+@media (max-width: 576px){
+	#menucontainer{
+		left: -10vw;
+	}
+}

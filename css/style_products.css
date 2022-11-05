@@ -44,10 +44,6 @@
 	padding-bottom: 2.5vw;
 	z-index: 100;
 }
-.break{
-	padding-left: calc(10vw - 30px) !important;
-	padding-right: calc(10vw - 30px) !important;
-}
 #navi{
 	padding-top: 30px;
 }
@@ -73,7 +69,18 @@
 #navi .navicon .cart span p{
 	color: white;
 }
-
+#navimobile .menu .burger-container .burger{
+	background-color: var(--g1);
+}
+#navimobile .cart a svg{
+	stroke: var(--g1);
+}
+#navimobile .cart span{
+	background: var(--c2);
+}
+#navimobile .cart span p{
+	color: white;
+}
 .body{
 	color: var(--g1);
 	text-align: center;
@@ -89,6 +96,7 @@
 	justify-content: center;
 	margin-top: 50px;
 }
+
 .thesocks h3{
 	position: relative;
 	visibility: hidden;

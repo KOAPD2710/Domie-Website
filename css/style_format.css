@@ -17,15 +17,15 @@
 	--filter-l:	#E47C95;
 	--filter-q:	#B15A9A;
 	--filter-f:	#494BA2;
-	--gra-full1:	linear-gradient(to bottom,#B84A80 -1%, #C74F80 1%, #FFBC80 9%, #FF96A3 65%, #C74F80 99%,#B84A80 101%);
-	--gra-full2:	linear-gradient(to bottom,#C95501 -1%, #EA5C2B 1%, #F3CF7A 9%, #FFBC80 65%, #EA5C2B 99%,#C95501 101%);
-	--gra-full3:	linear-gradient(to bottom,#EA9C1B -1%, #F0A500 1%, #A3DA8D 9%, #F3CF7A 65%, #F0A500 99%,#EA9C1B 101%);
-	--gra-full4:	linear-gradient(to bottom,#146356 -1%, #3D8361 1%, #91CEFF 9%, #A3DA8D 65%, #3D8361 99%,#146356 101%);
-	--gra-full5:	linear-gradient(to bottom,#193498 -1%, #0960BD 1%, #929EDB 9%, #91CEFF 65%, #0960BD 99%,#193498 101%);
-	--gra-full6:	linear-gradient(to bottom,#2A1A5E -1%, #3D2C8D 1%, #D789D7 9%, #929EDB 65%, #3D2C8D 99%,#2A1A5E 101%);
-	--gra-full7:	linear-gradient(to bottom,#440A67 -1%, #93329E 1%, #FF96A3 9%, #D789D7 65%, #93329E 99%,#440A67 101%);
+	--gra-full1:	linear-gradient(to bottom,#B84A80 0%, #C74F80 2%, #FFBC80 9%, #FF96A3 65%, #C74F80 98%,#B84A80 100%);
+	--gra-full2:	linear-gradient(to bottom,#C95501 0%, #EA5C2B 2%, #F3CF7A 9%, #FFBC80 65%, #EA5C2B 98%,#C95501 100%);
+	--gra-full3:	linear-gradient(to bottom,#EA9C1B 0%, #F0A500 2%, #A3DA8D 9%, #F3CF7A 65%, #F0A500 98%,#EA9C1B 100%);
+	--gra-full4:	linear-gradient(to bottom,#146356 0%, #3D8361 2%, #91CEFF 9%, #A3DA8D 65%, #3D8361 98%,#146356 100%);
+	--gra-full5:	linear-gradient(to bottom,#193498 0%, #0960BD 2%, #929EDB 9%, #91CEFF 65%, #0960BD 98%,#193498 100%);
+	--gra-full6:	linear-gradient(to bottom,#2A1A5E 0%, #3D2C8D 2%, #D789D7 9%, #929EDB 65%, #3D2C8D 98%,#2A1A5E 100%);
+	--gra-full7:	linear-gradient(to bottom,#440A67 0%, #93329E 2%, #FF96A3 9%, #D789D7 65%, #93329E 98%,#440A67 100%);
 	--gra-navi:		linear-gradient(to right, #c74f80, #ff96a2);
-	--gra-cta:		linear-gradient(to right,#494BA2 0%, #B15A9A 17%, #F47595 34%, #FF96A2 51%,#F47595 68%,#B15A9A 85%,#494BA2 100%);;
+	--gra-btn: 		linear-gradient(to right, #B84A80 0%, #C74F80 20%, #FFBC80 48%, #FFBC80 52%, #C74F80 80%, #B84A80 100%);
 
 }
 
@@ -55,25 +55,12 @@ body{
 body::-webkit-scrollbar{
 	display: none;
 }
-
-.break{
-	padding-left: 10vw;
-	padding-right: 10vw;
-}
-.test{
-	height: 200vh;
-}
-.testnavi{
-	height: 65px;
-	background-color: skyblue;
-}
-
 .btn1{
-	background: var(--gra-cta);
 	width: 230px;
 	padding: 22px 40px 15px 40px;
 	text-align: center;
 	align-items: center;
+	background: var(--gra-btn);
 	background-size: 200% auto;
 	color: #fff;
 	border: none;
@@ -90,14 +77,35 @@ body::-webkit-scrollbar{
 	transition: background-position .5s ease-in-out;
 }
 .btn1:focus{
-	animation: btnactive .7s ease-out;
+	animation: cartbtn .7s ease-out;
 	outline: none;
 	border: none;
 }
-
-@media (max-width: 576px){
-	.break{
-		padding-left: 30px;
-		padding-right: 30px;
-	}
+.btn2{
+	border: 2px solid transparent;
+	width: 230px;
+	border-radius: 100px;
+	background: linear-gradient(to right, white, white), var(--gra-btn);
+	background-size: 200% auto;
+	background-clip: padding-box, border-box;
+	background-origin: padding-box, border-box;
+	padding: 16px 75px 14px 75px;
+	white-space: nowrap;
+	transform-origin: center;
+	transition: all ease-in-out .4s;
+	cursor: pointer;
+}
+.btn2:hover{
+	background: var(--gra-btn);
+	background-size: 200% auto;
+	background-position: right center;
+	background-clip: border-box;
+	background-origin: border-box;
+	box-shadow: 0px 7px 15px rgba(0, 0, 0, .15);
+	color: #fff;
+}
+.btn2:focus{
+	animation: cartbtn .7s ease-out;
+	transform-origin: center;
+	outline: none;
 }

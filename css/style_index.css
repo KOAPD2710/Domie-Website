@@ -1,3 +1,7 @@
+.break{
+	padding-left: 10vw;
+	padding-right: 10vw;
+}
 .bodygradient{
 	width: 100%;
 	background: var(--gra-full1);

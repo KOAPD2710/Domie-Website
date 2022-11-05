@@ -40,6 +40,8 @@
 #navi .navicon a{
 	position: relative;
 	display: inline-block;
+	cursor: pointer;
+	user-select: none;
 }
 #navi .navicon a svg{
 	position: relative;
@@ -159,7 +161,7 @@
 	max-width: 200px;
 	min-width: 150px;
 	margin-top: 10px;
-	z-index: 999999;
+	z-index: 9989;
 }
 #navimobile .logo a{
 	position: relative;
@@ -270,6 +272,7 @@
 	right: 0;
 	top: 52%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 #navimobile .cart a svg{
 	position: relative;
@@ -308,7 +311,7 @@
 #menucontainer{
 	position: absolute;
 	display: block;
-	top: -5vh;
+	top: -10vh;
 	left: -10vw;
 	width: 100vw;
 	height: 110vh;
@@ -449,10 +452,326 @@
 #navimobile .menu input:checked ~ #menucontainer ul li a{
 	pointer-events: auto;
 }
+
+#modalcart{
+	position: fixed;
+	display: block;
+	top: 0;
+	right: 0;
+	left: 0%;
+	bottom: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	z-index: 100000000000000;
+	pointer-events: none;
+}
+#modalcart.checked{
+}
+#modalcart #modalbg{
+	position: relative;
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(to bottom, #B84A80 0%, #C74F80 40%, #FFBC80 100%);
+	opacity: 0;
+	pointer-events: none;
+	transition: all .5s ease;
+}
+#modalcart.checked #modalbg{
+	opacity: .8;
+	pointer-events: auto;
+	transition: all .5s ease-in .2s;
+}
+#cartcontainer{
+	position: absolute;
+	display: block;
+	top: 0;
+	right: -100%;
+	width: 480px;
+	height: 100vh;
+	background-color: white;
+	padding: 20px;
+	box-shadow: -10px 0px 10px rgba(0, 0, 0, .1);
+	pointer-events: auto;
+	transition: all 1s ease;
+}
+#modalcart.checked #cartcontainer{
+	right: 0px;
+	transition: all 1s cubic-bezier(0,.15,.13,.98) .5s;
+}
+#cartcontainer .closebtn{
+	position: absolute;
+	display: block;
+	top: 30px;
+	right: 30px;
+}
+#cartcontainer .closebtn button{
+	position: relative;
+	display: block;
+	width: 25px;
+	height: 25px;
+	margin-left: auto;
+	padding: 0px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+	transform: rotate(0deg);
+	opacity: 0;
+	transition: all .8s cubic-bezier(.85,.29,.91,.4);
+}
+#modalcart.checked #cartcontainer .closebtn button{
+	transform: rotate(720deg);
+	opacity: 1;
+	transform-origin: center;
+	transition: all .8s cubic-bezier(0,.41,.07,1.18) 1.3s;
+}
+#cartcontainer .closebtn button:focus{
+	border: none;
+	outline: none;
+}
+#cartcontainer .closebtn button div{
+	position: relative;
+	display: block;
+	width: 25px;
+	height: 25px;
+	background-color: white;
+}
+#cartcontainer .closebtn button span{
+	position: absolute;
+	display: block;
+	top: 20%;
+	width: 25px;
+	height: 3.5px;
+	border-radius: 1000px;
+	background-color: var(--c11);
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+#cartcontainer .closebtn button span:nth-child(2){
+	transform: rotate(-45deg);
+}
+#cartcontainer .closebtn button:hover span{
+	background-color: var(--g1);
+}
+#cartcontainer .yc{
+	position: relative;
+	display: block;
+	font-family: Fonth;
+	color: #B94A80;
+	text-align: center;
+	margin: 0px;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+#cartcontainer .checkcart{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: calc(100vh - 74px - 40px - 232px);
+	padding: 0px 10px;
+	overflow-y: scroll;
+}
+#cartcontainer .checkcart .wrap{
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 130px;
+	overflow: hidden;
+	margin: 20px 0px;
+}
+#cartcontainer .checkcart .wrap .img{
+	position: relative;
+	display: block;
+	width: 130px;
+	height: 130px;
+}
+#cartcontainer .checkcart .wrap .img img{
+	position: relative;
+	display: block;
+	width: auto;
+	height: 100%;
+	margin: auto;
+}
+#cartcontainer .checkcart .wrap .img a{
+	position: relative;
+	display: block;
+	width: 130px;
+	height: 100%;
+	margin: auto;
+}
+#cartcontainer .checkcart .wrap .img .imgcloud{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	width: 130px;
+	height: auto;
+}
+#cartcontainer .checkcart .wrap .iteminfo{
+	position: relative;
+	display: block;
+	width: 100%;
+	padding: 10px 5px 0px 20px;
+}
+#cartcontainer .checkcart .wrap .iteminfo .first{
+	position: relative;
+	display: flex;
+}
+#cartcontainer .checkcart .wrap .iteminfo .first p{
+	position: relative;
+	display: inline-block;
+	font-weight: bold;
+	color: var(--g1);
+}
+#cartcontainer .checkcart .wrap .iteminfo .first button{
+	position: relative;
+	display: block;
+	width: 20px;
+	height: 20px;
+	margin-left: auto;
+	padding: 0px;
+	border: none;
+	background-color: transparent;
+	cursor: pointer;
+}
+#cartcontainer .checkcart .wrap .iteminfo .first button:focus{
+	border: none;
+	outline: none;
+}
+#cartcontainer .checkcart .wrap .iteminfo .first button span{
+	position: absolute;
+	display: block;
+	width: 20px;
+	height: 3.5px;
+	border-radius: 1000px;
+	background-color: #aaa;
+	transform: rotate(45deg);
+	transform-origin: center;
+}
+#cartcontainer .checkcart .wrap .iteminfo .first button span:nth-child(2){
+	transform: rotate(-45deg);
+}
+#cartcontainer .checkcart .wrap .iteminfo .first button:hover span{
+	background-color: var(--g1);
+}
+#cartcontainer .checkcart .wrap .iteminfo .second{
+	position: relative;
+	display: block;
+}
+#cartcontainer .checkcart .wrap .iteminfo .second p{
+	position: relative;
+	display: inline-block;
+	font-size: 12px;
+	color: var(--g2);
+}
+#cartcontainer .checkcart .wrap .iteminfo .third{
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity{
+	position: relative;
+	display: flex;
+	width: 90px;
+	text-align: center;
+	font-size: 16px;
+	border: 1px solid var(--g1);
+	border-radius: 1000px;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity input{
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity input::-webkit-inner-spin-button, #cartcontainer .checkcart .wrap .iteminfo .third .quantity input::-webkit-outer-spin-button{
+	display: none;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity .is-form{
+	vertical-align: middle;
+	cursor: pointer;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity .is-form.minus{
+	padding-left: 10px;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity .is-form.plus{
+	padding-right: 10px;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .quantity .input-qty{
+	width: 100%;
+	padding-top: 3px;
+	text-align: center;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third p{
+	position: relative;
+	display: block;
+	margin: 0px;
+	margin-left: auto;
+	align-self: center;
+	font-weight: bold;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third .hide{
+	display: none;
+}
+#cartcontainer .checkcart .wrap .iteminfo .third p:before{
+	content: "$ ";
+}
+
+#cartcontainer .totaldiv{
+	position: relative;
+	bottom: 0;
+	display: block;
+	width: 100%;
+	padding-top: 30px;
+}
+#cartcontainer .totaldiv .deli{
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+#cartcontainer .totaldiv .deli p{
+	position: relative;
+	display: inline-block;
+}
+#cartcontainer .totaldiv .deli p:nth-child(2), #cartcontainer .totaldiv .total p:nth-child(2){
+	margin-left: auto;
+}
+#cartcontainer .totaldiv .deli p:nth-child(2):before, #cartcontainer .totaldiv .total p:nth-child(2):before{
+	content: "$ ";
+}
+#cartcontainer .totaldiv .total{
+	position: relative;
+	display: flex;
+	width: 100%;
+}
+#cartcontainer .totaldiv .total p{
+	position: relative;
+	display: inline-block;
+	font-size: 1.25rem;
+	font-weight: bold;
+}
+#cartcontainer .totaldiv .btndiv{
+	position: relative;
+	display: flex;
+	width: 100%;
+	margin-top: 20px;
+	padding-bottom: 35px;
+}
+#cartcontainer .totaldiv .btndiv .btn1{
+	margin-left: 10px;
+}
+#cartcontainer .totaldiv .btndiv .btn2{
+	margin-right: 10px;
+}
 @media (max-width: 576px){
 	#menucontainer{
 		top: ;
 		left: -30px;
+	}
+}
+@media (max-width: 992px){
+	#cartcontainer{
+		width: calc(100vw);
 	}
 }
 
