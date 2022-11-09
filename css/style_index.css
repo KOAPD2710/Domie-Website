@@ -185,22 +185,6 @@
 	fill: white;
 }
 
-
-
-#standard{
-	position: relative;
-	display: block;
-	font-family: Fonth;
-	text-transform: uppercase;
-	color: white;
-	text-align: center;
-	height: 100vh;
-}
-#standard video{
-	width: 60%;
-	margin: auto;
-}
-
 #imgparallax{
 	position: relative;
 	display: block;
@@ -331,10 +315,8 @@
 }
 
 #imgparallax .parallaxcontainer .stardiv img{
-	width: 10%;
-	max-width: 30px;
-	height: 10%;
-	max-height: 30px;
+	width: calc(30px - 16.5px + var(--i)*1.5px);
+	height: calc(30px - 16.5px + var(--i)*1.5px);
 }
 #imgparallax .parallaxcontainer #star1 img{
 	top: 0;
@@ -383,7 +365,44 @@
 	left: 0;
 }
 
-
+body #footerformat{
+	color: white;
+}
+#footer .footerlink .hr{
+	background-color: white;
+}
+#footer .footerlink a{
+	color: white;
+}
+#footer .footerlink a:after{
+	background-color: white;
+}
+#footer .subscribe .inputform input{
+	background: transparent;
+}
+#footer .subscribe .inputwidth .hr{
+	background-color: white;
+}
+#footer .subscribe .inputform input::placeholder{
+	color: white;
+	opacity: .5;
+}
+#footer .subscribe .inputform button{
+	color: white;
+	background: transparent;
+}
+#footer .subscribe .socialmethod ul li a{
+	color: white;
+}
+#policy .hr{
+	background: white;
+}
+#policy a{
+	color: white;
+}
+#policy a:after{
+	background-color: white;
+}
 @media (max-width: 576px){
 	.carouselitem .owl-item.active.center .wrap a img{
 		width: 80%;
