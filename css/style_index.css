@@ -194,14 +194,194 @@
 	text-transform: uppercase;
 	color: white;
 	text-align: center;
-	height: 400vh;
+	height: 100vh;
 }
 #standard video{
 	width: 60%;
 	margin: auto;
 }
 
+#imgparallax{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 150vh;
+}
+#imgparallax .parallaxcontainer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 150vh;
+}
+#imgparallax .parallaxcontainer .layer{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+#imgparallax .parallaxcontainer .layer img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+#imgparallax .parallaxcontainer #box1{
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	width: 50vw;
+	height: 50vh;
+}
+#imgparallax .parallaxcontainer #box1 .cloud{
+	top: auto;
+	bottom: 0;
+	right: 8%;
+	width: 85%;
+	height: auto;
+	margin: auto;
+}
+#imgparallax .parallaxcontainer #box1 .box{
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: auto;
+	height: 95%;
+}
 
+#imgparallax .parallaxcontainer #box2{
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	bottom: 0;
+	margin-top: auto;
+	width: 60vw;
+	height: 50vh;
+}
+#imgparallax .parallaxcontainer #box2 .cloud{
+	top: auto;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	width: 85%;
+	height: auto;
+}
+#imgparallax .parallaxcontainer #box2 .box{
+	left: 0;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	margin: auto;
+	width: auto;
+	height: 90%;
+}
+#imgparallax .parallaxcontainer #text1{
+	left: 0;
+	right: 0;
+	margin-right: auto;
+	width: 50vw;
+	height: 50vh;
+	text-align: center;
+	align-content: center;
+}
+#imgparallax .parallaxcontainer #text2{
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	margin-top: auto;
+	margin-left: auto;
+	width: 50vw;
+	height: 50vh;
+	text-align: center;
+	align-content: center;
+}
+#imgparallax .parallaxcontainer .texthold{
+	position: absolute;
+	display: inline;
+	width: 100%;
+	height: 200px;
+	top: 15%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	text-align: center;
+	align-content: center;
+	align-items: center;
+	color: white;
+}
+#imgparallax .parallaxcontainer .texthold .headtext{
+	font-family: Fonth;
+	font-size: 4rem;
+}
+#imgparallax .parallaxcontainer .starcontainer{
+	position: absolute;
+	top: 50vh;
+	left: 10%;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 35vw;
+	height: 75vh;
+}
+#imgparallax .parallaxcontainer .star{
+	transform: rotate(calc(10deg*var(--i)));
+}
+
+#imgparallax .parallaxcontainer .stardiv img{
+	width: 10%;
+	max-width: 30px;
+	height: 10%;
+	max-height: 30px;
+}
+#imgparallax .parallaxcontainer #star1 img{
+	top: 0;
+	left: auto;
+	right: 0;
+}
+#imgparallax .parallaxcontainer #star2 img{
+	top: 15%;
+	left: 70%;
+}
+#imgparallax .parallaxcontainer #star3 img{
+	top: 25%;
+	left: 53%;
+}
+#imgparallax .parallaxcontainer #star4 img{
+	top: 37%;
+	left: 45%;
+}
+#imgparallax .parallaxcontainer #star5 img{
+	top: 46%;
+	left: 57%;
+}
+#imgparallax .parallaxcontainer #star6 img{
+	top: 55%;
+	left: 63%;
+}
+#imgparallax .parallaxcontainer #star7 img{
+	top: 66%;
+	left: 71%;
+}
+#imgparallax .parallaxcontainer #star8 img{
+	top: 75%;
+	left: 63%;
+}
+#imgparallax .parallaxcontainer #star9 img{
+	top: 82%;
+	left: 43%;
+}
+#imgparallax .parallaxcontainer #star10 img{
+	top: 90%;
+	left: 22%;
+}
+#imgparallax .parallaxcontainer #star11 img{
+	top: auto;
+	bottom: 0;
+	left: 0;
+}
 
 
 @media (max-width: 576px){

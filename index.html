@@ -58,7 +58,7 @@
 	<script type="text/javascript" src="js/js_index.js"></script>
 	<script type="text/javascript" src="js/format_navi.js"></script>
 
-
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
 </head>
 <body>
 	<div id="modalcart">
@@ -155,47 +155,7 @@
 			</div>
 		</div>
 	</div>
-	<div id="menucontainer">
-		<ul>
-			<li class="" style="--i:1">
-				<a href="products.html">
-					<p>Socks</p>
-				</a>
-			</li>
-			<li class="" style="--i:2">
-				<a href="gifts.html">
-					<p>Gifts</p>
-				</a>
-			</li>
-			<li class="" style="--i:3">
-				<a href="blogs.html">
-					<p>Blogs</p>
-				</a>
-			</li>
-			<li class="" style="--i:4">
-				<a href="about.html">
-					<p>About</p>
-				</a>
-			</li>
-			<li class="" style="--i:5">
-				<a href="sign.html">
-					<p>Account</p>
-				</a>
-			</li>
-		</ul>
-		<div class="cirleicon">
-			<img src="img/cirle.webp">
-			<img src="img/cirlesock.webp">
-		</div>
-		<div class="cloudcontainer" id="cloudcontainer">
-			<div class="cloud cloud1" data-depth="0.1">
-				<img src="img/cloud1.webp">
-			</div>
-			<div class="cloud cloud2" data-depth="0.2">
-				<img src="img/cloud3.webp">
-			</div>
-		</div>
-	</div>
+	<div w3-include-html="menufixxedbar.html"></div>
 	<div class="bodygradient">
 		
 		<div w3-include-html="navi.html"></div>
@@ -260,7 +220,6 @@
 				<div class="menu">
 					<label for="menucheckbox">
 						<input type="checkbox" name="menu" id="menucheckbox">
-						
 						<div class="circletransform"></div>
 						<div class="burger-container">
 							<span class="burger"></span>
@@ -274,7 +233,47 @@
 							<span class="justx"></span>
 							<span class="justx"></span>
 						</div>
-						
+						<div class="" id="menucontainer">
+							<ul>
+								<li class="" style="--i:1">
+									<a href="products.html">
+										<p>Socks</p>
+									</a>
+								</li>
+								<li class="" style="--i:2">
+									<a href="gifts.html">
+										<p>Gifts</p>
+									</a>
+								</li>
+								<li class="" style="--i:3">
+									<a href="blogs.html">
+										<p>Blogs</p>
+									</a>
+								</li>
+								<li class="" style="--i:4">
+									<a href="about.html">
+										<p>About</p>
+									</a>
+								</li>
+								<li class="" style="--i:5">
+									<a href="sign.html">
+										<p>Account</p>
+									</a>
+								</li>
+							</ul>
+							<div class="cirleicon">
+								<img src="img/cirle.webp">
+								<img src="img/cirlesock.webp">
+							</div>
+							<div class="cloudcontainer" id="cloudcontainer">
+								<div class="cloud cloud1" data-depth="0.1">
+									<img src="img/cloud1.webp">
+								</div>
+								<div class="cloud cloud2" data-depth="0.2">
+									<img src="img/cloud3.webp">
+								</div>
+							</div>
+						</div>
 					</label>
 				</div>
 				<div class="logo">
@@ -283,7 +282,7 @@
 					</a>
 				</div>
 				<div class="cart">
-					<a href="cart.html">
+					<a>
 						<svg width="32" height="32" viewBox="0 0 24 24">
 							<path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
 							<line class="line" x1="3" y1="6" x2="21" y2="6"></line>
@@ -293,6 +292,7 @@
 					</a>
 				</div>
 			</div>
+
 		</div>
 		<!--Navi-->
 
@@ -454,6 +454,7 @@
 							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
 							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
 							$("#navi .navicon .cart span p").css("color", $cartcolor);
+							$("#navimobile .cart span p").css("color", $cartcolor);
 							$("body").css("background-color", $bodycolor);
 						};
 						if( $(this).prev().hasClass('center') ){
@@ -463,6 +464,7 @@
 							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
 							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
 							$("#navi .navicon .cart span p").css("color", $cartcolor);
+							$("#navimobile .cart span p").css("color", $cartcolor);
 							$("body").css("background-color", $bodycolor);
 						};
 					});
@@ -474,6 +476,8 @@
 							owltwo.trigger('next.owl.carousel');
 							var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
 							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
+							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							$("#navimobile .cart span p").css("color", $cartcolor);
 							$(".bodygradient").css("background" , $bgchangesm);
 							$("body").css("background-color", $bodycolor);
 						});
@@ -482,6 +486,8 @@
 							owltwo.trigger('prev.owl.carousel');
 							var $bgchangesm = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-bg");
 							var $bodycolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-body");
+							var $cartcolor = $(".carouselitem .owl-one .owl-item.active.center .wrap").attr("color-cart");
+							$("#navimobile .cart span p").css("color", $cartcolor);
 							$(".bodygradient").css("background" , $bgchangesm);
 							$("body").css("background-color", $bodycolor);
 						});
@@ -500,14 +506,111 @@
 			</video>
 		</div>
 		
-		<div class="imgparallax">
-			
+		<div class="imgparallax" id="imgparallax">
+			<div class="parallaxcontainer">
+				<div class="parallaxbox" id="parallaxbox">
+					<div class="layer" id="box1" data-depth="0.3">
+						<div class="layer" data-depth="0.5">
+							<img class="cloud" src="img/cloud1.webp">
+						</div>
+						<div class="layer" data-depth="0.7">
+							<img class="box" src="img/h1.webp">
+						</div>
+					</div>
+					<div class="layer textdiv" id="text1" data-depth="0.1">
+						<div class="layer" data-depth-x="0.1">
+							<div class="texthold">
+								<p class="headtext">Multi packs</p>
+								<p class="scrtext">You can choose 2 - 7 packs box or custom your own box.</p>
+							</div>
+						</div>
+					</div>
+					<div class="layer" id="box2" data-depth="0.3">
+						<div class="layer" data-depth="0.5">
+							<img class="cloud" src="img/cloud2.webp">
+						</div>
+						<div class="layer" data-depth="0.7">
+							<img class="box" src="img/h2.webp">
+						</div>
+					</div>
+					<div class="layer textdiv" id="text2" data-depth="0.1">
+						<div class="layer" data-depth-x="0.1">
+							<div class="texthold">
+								<p class="headtext">Special Gift</p>
+								<p class="scrtext">This will be a great gift for your family or friend.</p>
+							</div>
+						</div>
+					</div>
+					<div class="starcontainer" id="starcontainer" data-depth="0.5">
+						<div class="layer stardiv" id="star1" style="--i:1" data-depth="0.2">
+							<img src="img/star.svg" class="star" style="--i:1">
+						</div>
+						<div class="layer stardiv" id="star2" style="--i:2" data-depth="0.19">
+							<img src="img/star.svg" class="star" style="--i:2">
+						</div>
+						<div class="layer stardiv" id="star3" style="--i:3" data-depth="0.18">
+							<img src="img/star.svg" class="star" style="--i:3">
+						</div>
+						<div class="layer stardiv" id="star4" style="--i:4" data-depth="0.17">
+							<img src="img/star.svg" class="star" style="--i:4">
+						</div>
+						<div class="layer stardiv" id="star5" style="--i:5" data-depth="0.16">
+							<img src="img/star.svg" class="star" style="--i:5">
+						</div>
+						<div class="layer stardiv" id="star6" style="--i:6" data-depth="0.15">
+							<img src="img/star.svg" class="star" style="--i:6">
+						</div>
+						<div class="layer stardiv" id="star7" style="--i:7" data-depth="0.14">
+							<img src="img/star.svg" class="star" style="--i:7">
+						</div>
+						<div class="layer stardiv" id="star8" style="--i:8" data-depth="0.13">
+							<img src="img/star.svg" class="star" style="--i:8">
+						</div>
+						<div class="layer stardiv" id="star9" style="--i:9" data-depth="0.12">
+							<img src="img/star.svg" class="star" style="--i:9">
+						</div>
+						<div class="layer stardiv" id="star10" style="--i:10" data-depth="0.11">
+							<img src="img/star.svg" class="star" style="--i:10">
+						</div>
+						<div class="layer stardiv" id="star11" style="--i:11" data-depth="0.1">
+							<img src="img/star.svg" class="star" style="--i:11">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 		<!--
 		<div w3-include-html="footer.html"></div>-->
 	</div>
+	<script type="text/javascript">
+		var parallaxbox = document.getElementById('parallaxbox');
+		var parallaxInstance = new Parallax(parallaxbox, {
+			parallaxInstance.friction(0.8, 0.8);
+		});
+	</script>
+	<script type="text/javascript">
+		var box1 = document.getElementById('box1');
+		var parallaxInstance = new Parallax(box1);
+	</script>
+	<script type="text/javascript">
+		var box2 = document.getElementById('box2');
+		var parallaxInstance = new Parallax(box2);
+	</script>
+	<script type="text/javascript">
+		var text1 = document.getElementById('text1');
+		var parallaxInstance = new Parallax(text1);
+	</script>
+	<script type="text/javascript">
+		var text2 = document.getElementById('text2');
+		var parallaxInstance = new Parallax(text2);
+	</script>
+	<script type="text/javascript">
+		var starcontainer = document.getElementById('starcontainer');
+		var parallaxInstance = new Parallax(starcontainer);
+	</script>
 </body>
 	<script type="text/javascript">
 		includeHTML();
 	</script>
+	
 </html>

@@ -152,6 +152,7 @@
 	position: relative;
 	display: flex;
 	padding-top: 10px;
+	z-index: 999;
 }
 #navimobile .logo{
 	position: relative;
@@ -161,7 +162,7 @@
 	max-width: 200px;
 	min-width: 150px;
 	margin-top: 10px;
-	z-index: 9989;
+	z-index: 999;
 }
 #navimobile .logo a{
 	position: relative;
@@ -179,6 +180,7 @@
 	width: 80px;
 	height: 100%;
 	z-index: 9990;
+
 }
 #navimobile .menu label{
 	position: absolute;
@@ -223,7 +225,7 @@
 	height: 0px;
 	border-radius: 1000000000px;
 	opacity: 1;
-	z-index: 9990;
+	z-index: 10000;
 	background: url(../img/bgmenu.webp);
 	background-size: contain;
 	background-position: center;
@@ -237,7 +239,7 @@
 	top: -50%;
 	left: 0;
 	transform: rotate(0deg) scale(0);
-	z-index: 9998;
+	z-index: 1000000;
 	transition: all .8s cubic-bezier(.58,.05,.35,.93);
 }
 #navimobile .menu .x-container .justx{
@@ -252,6 +254,7 @@
 	border-radius: 100px;
 	transform-origin: center;
 	background: white;
+	z-index: 10001;
 }
 #navimobile .menu .x-container .justx:nth-child(1){
 	transform: rotate(45deg);
@@ -314,14 +317,41 @@
 	top: -10vh;
 	left: -10vw;
 	width: 100vw;
-	height: 110vh;
+	height: 120vh;
 	text-align: center;
 	pointer-events: none;
 	background: linear-gradient(to bottom, #B84A80 5%, #FFBC80 110%);
 	opacity: 0;
-	z-index: 9998;
+	z-index: 10001;
 	overflow: hidden;
 	transition: opacity .3s ease-in-out 0s;
+}
+#menucontainer .logo, #menucontainer .cart{
+}
+#menucontainer .x-container{
+	position: relative;
+	display: block;
+	top: 0;
+	left: 0;
+	transform: rotate(0deg) scale(1);
+	z-index: 10001;
+	transition: all .8s cubic-bezier(.58,.05,.35,.93);
+}
+#menucontainer .x-container .justx{
+	position: absolute;
+	display: block;
+	width: 35px;
+	height: 5px;
+	border-radius: 100px;
+	transform-origin: center;
+	background: white;
+	z-index: 10001;
+}
+#menucontainer .x-container .justx:nth-child(1){
+	transform: rotate(45deg);
+}
+#menucontainer .x-container .justx:nth-child(2){
+	transform: rotate(-45deg);
 }
 #menucontainer ul{
 	position: relative;
@@ -356,7 +386,6 @@
 	text-transform: uppercase;
 	font-size: 36px;
 	font-weight: 800;
-
 }
 #menucontainer ul li a:hover p{
 	transform: scale(1.1);
@@ -413,17 +442,15 @@
 #navimobile .menu .burger-container:hover .burger{
 	transform: translateY(-27px);
 }
-#navimobile .menu label:hover .x-container .justx{
-}
 #navimobile .menu .cirleicon:hover img:nth-child(2){
 	filter: drop-shadow(0px 0px 5px white);
 	transition: all .2s ease;
 }
-#navimobile .menu input:checked ~ #menucontainer .cloud1{
+#menucontainer.checked .cloud1{
 	right: -30%;
 	transition: all 1.5s cubic-bezier(.4,.01,.76,.94) 0s;
 }
-#navimobile .menu input:checked ~ #menucontainer .cloud2{
+#menucontainer.checked .cloud2{
 	left: -40%;
 	transition: all 1.2s cubic-bezier(.4,.01,.76,.94) 0.3s;
 }
@@ -440,21 +467,20 @@
 	transform-origin: center;
 	transition: all .8s cubic-bezier(0,.41,.07,1.18);
 }
-#navimobile .menu input:checked ~ #menucontainer{
+#menucontainer.checked{
 	opacity: 1;
 	transition: opacity .8s ease-out .5s;
 }
-#navimobile .menu input:checked ~ #menucontainer ul li{
+#menucontainer.checked ul li{
 	transform: translateY(0px);
 	opacity: 1;
 	transition: all .4s ease-out calc((var(--i)*.1s) + .6s);
 }
-#navimobile .menu input:checked ~ #menucontainer ul li a{
+#menucontainer.checked ul li a{
 	pointer-events: auto;
 }
-
 #modalcart{
-	position: fixed;
+	position: absolute;
 	display: block;
 	top: 0;
 	right: 0;
@@ -465,8 +491,6 @@
 	overflow: hidden;
 	z-index: 100000000000000;
 	pointer-events: none;
-}
-#modalcart.checked{
 }
 #modalcart #modalbg{
 	position: relative;
@@ -487,14 +511,14 @@
 	position: absolute;
 	display: block;
 	top: 0;
-	right: -100%;
+	right: calc(-100vw);
 	width: 480px;
 	height: 100vh;
 	background-color: white;
 	padding: 20px;
 	box-shadow: -10px 0px 10px rgba(0, 0, 0, .1);
 	pointer-events: auto;
-	transition: all 1s ease;
+	transition: all 1s cubic-bezier(.32,.01,.75,.35);
 }
 #modalcart.checked #cartcontainer{
 	right: 0px;
@@ -764,10 +788,7 @@
 	margin-right: 10px;
 }
 @media (max-width: 576px){
-	#menucontainer{
-		top: ;
-		left: -30px;
-	}
+
 }
 @media (max-width: 992px){
 	#cartcontainer{
@@ -775,7 +796,12 @@
 	}
 }
 
+@media (max-width: 576px){
+	#menucontainer ul li a p{
+		font-size: 30px;
+	}
 
+}
 
 
 
