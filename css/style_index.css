@@ -225,6 +225,7 @@
 	width: 85%;
 	height: auto;
 	margin: auto;
+	pointer-events: auto;
 }
 #imgparallax .parallaxcontainer #box1 .box{
 	left: 0;
@@ -232,8 +233,16 @@
 	margin: auto;
 	width: auto;
 	height: 95%;
+	pointer-events: auto;
+	transition: all .1s ease;
 }
-
+#imgparallax .parallaxcontainer #box1:hover .box{
+	filter: drop-shadow(0px 0px 10px white);
+}
+#imgparallax .parallaxcontainer #box1:hover ~ .starcontainer .stardiv img{
+	filter: drop-shadow(0px 0px calc(.8px*var(--i)) white);
+	transition: all .1s ease-in calc(var(--i)*.1s);
+}
 #imgparallax .parallaxcontainer #box2{
 	left: 0;
 	right: 0;
@@ -250,6 +259,7 @@
 	margin: auto;
 	width: 85%;
 	height: auto;
+	pointer-events: auto;
 }
 #imgparallax .parallaxcontainer #box2 .box{
 	left: 0;
@@ -259,6 +269,16 @@
 	margin: auto;
 	width: auto;
 	height: 90%;
+	pointer-events: auto;
+	transition: all .1s ease;
+}
+#imgparallax .parallaxcontainer #box2:hover .box{
+	filter: drop-shadow(0px 0px 10px white);
+	Tra
+}
+#imgparallax .parallaxcontainer #box2:hover ~ .starcontainer .stardiv img{
+	filter: drop-shadow(0px 0px calc(.8px*var(--i)) white);
+	transition: all .1s ease-in calc(.88s - var(--i)*.08s);
 }
 #imgparallax .parallaxcontainer #text1{
 	left: 0;
@@ -309,6 +329,11 @@
 	margin-right: auto;
 	width: 35vw;
 	height: 75vh;
+	pointer-events: auto;
+}
+#imgparallax .parallaxcontainer .starcontainer:hover .stardiv img{
+	filter: drop-shadow(0px 0px calc(.8px*var(--i)) white);
+	transition: all .1s ease-in calc(var(--i)*.05s);
 }
 #imgparallax .parallaxcontainer .star{
 	transform: rotate(calc(10deg*var(--i)));
@@ -317,6 +342,8 @@
 #imgparallax .parallaxcontainer .stardiv img{
 	width: calc(30px - 16.5px + var(--i)*1.5px);
 	height: calc(30px - 16.5px + var(--i)*1.5px);
+	pointer-events: auto;
+	transition: all .15s ease-out calc(var(--i)*.05s);
 }
 #imgparallax .parallaxcontainer #star1 img{
 	top: 0;
@@ -379,6 +406,7 @@ body #footerformat{
 }
 #footer .subscribe .inputform input{
 	background: transparent;
+	color: white;
 }
 #footer .subscribe .inputwidth .hr{
 	background-color: white;
@@ -411,7 +439,11 @@ body #footerformat{
 		font-size: 100px;
 	}
 }
-
+@media (max-width: 1200px){
+	#imgparallax .parallaxcontainer #box1, #imgparallax .parallaxcontainer #box2{
+		width: 70vw;
+	}
+}
 
 
 
