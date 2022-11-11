@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<script>
-		function includeHTML() {
-			var z, i, elmnt, file, xhttp;
-			/*loop through a collection of all HTML elements:*/
-			z = document.getElementsByTagName("*");
-			for (i = 0; i < z.length; i++) {
-			elmnt = z[i];
-			/*search for elements with a certain atrribute:*/
-			file = elmnt.getAttribute("w3-include-html");
-			if (file) {
-				/*make an HTTP request using the attribute value as the file name:*/
-				xhttp = new XMLHttpRequest();
-				xhttp.onreadystatechange = function() {
-				if (this.readyState == 4) {
-					if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-					if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
-					/*remove the attribute, and call this function once more:*/
-					elmnt.removeAttribute("w3-include-html");
-					includeHTML();
-					};
-				};
-				xhttp.open("GET", file, true);
-				xhttp.send();
-				/*exit the function:*/
-				return;
-				};
-			};
-		};</script>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Domie</title>
@@ -52,8 +24,8 @@
 	<link rel="stylesheet" type="text/css" href="css/style_format_typo.css">
 	<link rel="stylesheet" type="text/css" href="css/style_navi.css">
 	<link rel="stylesheet" type="text/css" href="css/style_footer.css">
-	<link rel="stylesheet" type="text/css" href="css/format_break.css">
 	<link rel="stylesheet" type="text/css" href="css/style_index.css">
+	<link rel="stylesheet" type="text/css" href="css/style-only-index.css">
 	<link rel="stylesheet" type="text/css" href="css/style_keyframes.css">
 	<script type="text/javascript" src="js/js_index.js"></script>
 	<script type="text/javascript" src="js/format_navi.js"></script>
@@ -80,13 +52,13 @@
 				<div class="wrap">
 					<div class="img">
 						<img src="img/cloud1.webp" class="imgcloud">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l17.webp" class="imgitem">
 						</a>
 					</div>
 					<div class="iteminfo">
 						<div class="first">
-							<a href="products-detail.html">
+							<a href="over-the-rainbow.html">
 								<p>BB QUE PARTY</p>
 							</a>
 							<button>
@@ -111,13 +83,13 @@
 				<div class="wrap">
 					<div class="img">
 						<img src="img/cloud1.webp" class="imgcloud">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l9.webp" class="imgitem">
 						</a>
 					</div>
 					<div class="iteminfo">
 						<div class="first">
-							<a href="products-detail.html">
+							<a href="over-the-rainbow.html">
 								<p>BB QUE PARTY</p>
 							</a>
 							<button>
@@ -157,10 +129,8 @@
 			</div>
 		</div>
 	</div>
-	<div w3-include-html="menufixxedbar.html"></div>
 	<div class="bodygradient">
 		
-		<div w3-include-html="navi.html"></div>
 		<div class="d-lg-flex d-none">
 			<div class="container-fluid break" id="navi">
 				<div class="navlogo mr-auto">
@@ -302,37 +272,27 @@
 			<div class="carouselitem">
 				<div class="owl-one owl-carousel owl-theme">
 					<div class="wrap bg1" color-bg="var(--gra-full1)" color-cart="var(--c5)" color-body="#B84A80">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l6.webp">
 						</a>
 					</div>
 					<div class="wrap bg2" color-bg="var(--gra-full2)" color-cart="var(--c6)" color-body="#C95501">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/s9.webp">
 						</a>
 					</div>
 					<div class="wrap bg3" color-bg="var(--gra-full3)" color-cart="var(--c7)" color-body="#EA9C1B">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l16.webp">
 						</a>
 					</div>
-					<div class="wrap bg4" color-bg="var(--gra-full4)" color-cart="var(--c8)" color-body="#146356">
-						<a href="products-detail.html">
-							<img src="img/prod/f9.webp">
-						</a>
-					</div>
-					<div class="wrap bg5" color-bg="var(--gra-full5)" color-cart="var(--c9)" color-body="#193498">
-						<a href="products-detail.html">
-							<img src="img/prod/s7.webp">
-						</a>
-					</div>
 					<div class="wrap bg6" color-bg="var(--gra-full6)" color-cart="var(--c10)" color-body="#2A1A5E">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l24.webp">
 						</a>
 					</div>
 					<div class="wrap bg7" color-bg="var(--gra-full7)" color-cart="var(--c11)" color-body="#440A67">
-						<a href="products-detail.html">
+						<a href="over-the-rainbow.html">
 							<img src="img/prod/l3.webp">
 						</a>
 					</div>
@@ -359,20 +319,6 @@
 						<span class="char char3">s</span>
 						<span class="char char4">h</span>
 						<h1>FISH</h1>
-					</span>
-					<span class="word bg4">
-						<span class="char char1">p</span>
-						<span class="char char2">i</span>
-						<span class="char char3">g</span>
-						<span class="char char4">g</span>
-						<span class="char char5">y</span>
-						<h1>PIGGY</h1>
-					</span>
-					<span class="word bg5">
-						<span class="char char1">s</span>
-						<span class="char char2">a</span>
-						<span class="char char3">w</span>
-						<h1>SAW</h1>
 					</span>
 					<span class="word bg6">
 						<span class="char char1">v</span>
@@ -508,7 +454,10 @@
 							<img class="cloud" src="img/cloud1.webp" data-scroll-speed="80">
 						</div>
 						<div class="layer" data-depth="0.4">
-							<img class="box" src="img/h1.webp" data-scroll-speed="30">
+							<a href="">
+								<img class="box" src="img/h1.webp" data-scroll-speed="30">
+							</a>
+							
 						</div>
 					</div>
 					<div class="layer textdiv" id="text1" data-depth="0.1" data-scroll-speed="10">
@@ -524,7 +473,9 @@
 							<img class="cloud" src="img/cloud2.webp" data-scroll-speed="90">
 						</div>
 						<div class="layer" data-depth="0.7">
-							<img class="box" src="img/h2.webp" data-scroll-speed="60">
+							<a href="">
+								<img class="box" src="img/h2.webp" data-scroll-speed="60">
+							</a>
 						</div>
 					</div>
 					<div class="layer textdiv" id="text2" data-depth="0.1" data-scroll-speed="40">
@@ -573,8 +524,6 @@
 				</div>
 			</div>
 		</div>
-
-		<div w3-include-html="footer.html"></div>
 
 		<div class="d-lg-block d-none" id="footerformat">
 			<div class="container-fluid break" id="footer">
@@ -682,9 +631,5 @@
 		var starcontainer = document.getElementById('starcontainer');
 		var parallaxInstance = new Parallax(starcontainer);
 	</script>
-</body>
-	<script type="text/javascript">
-		includeHTML();
-	</script>
-	
+</body>	
 </html>

@@ -1,0 +1,59 @@
+body #footerformat{
+	color: white;
+}
+#navi .navicon a svg{
+	stroke: white;
+}
+#navi .navicon .cart span{
+	background-color: white;
+}
+#navi .navicon .cart span p{
+	color: var(--c5);
+}
+#navi .navlink ul li a{
+	color: white;
+}
+#navi .navlink ul li a:after{
+	background-color: white;
+	background: white;
+}
+#navi .navlink ul li a:hover{
+	color: white;
+}
+
+#footer .footerlink .hr{
+	background-color: white;
+}
+#footer .footerlink a{
+	color: white;
+}
+#footer .footerlink a:after{
+	background-color: white;
+}
+#footer .subscribe .inputform input{
+	background: transparent;
+	color: white;
+}
+#footer .subscribe .inputwidth .hr{
+	background-color: white;
+}
+#footer .subscribe .inputform input::placeholder{
+	color: white;
+	opacity: .5;
+}
+#footer .subscribe .inputform button{
+	color: white;
+	background: transparent;
+}
+#footer .subscribe .socialmethod ul li a{
+	color: white;
+}
+#policy .hr{
+	background: white;
+}
+#policy a{
+	color: white;
+}
+#policy a:after{
+	background-color: white;
+}

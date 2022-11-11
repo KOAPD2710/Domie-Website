@@ -38,6 +38,13 @@ $(document).ready(function(){
 			$("#modalcart").addClass("checked");
 			document.body.style.overflow = 'hidden';
 		}
+	});
+
+	$("#navi .navlink ul li a").hover(function(){
+		$("#navi .navlink ul li.active a").css('color', 'var(--g1)');
+		$('#navi .navlink ul li.active a::after').css('width', '0%')
+	}, function(){
+		$("#navi .navlink ul li.active a").css('color', '');
 	})
 });
 

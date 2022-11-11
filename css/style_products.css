@@ -44,43 +44,6 @@
 	padding-bottom: 2.5vw;
 	z-index: 100;
 }
-#navi{
-	padding-top: 30px;
-}
-#navi .navlink ul li a{
-	color: var(--g1);
-}
-#navi .navlink ul li a:after{
-	background: var(--gra-navi);
-}
-#navi .navlink ul li.active a,#navi .navlink ul li a:hover{
-	color: var(--c5);
-}
-#navi .navlink ul li.active a:after{
-	width: 100%;
-	height: 4.5px;
-}
-#navi .navicon a svg{
-	stroke: var(--g1);
-}
-#navi .navicon .cart span{
-	background: var(--c2);
-}
-#navi .navicon .cart span p{
-	color: white;
-}
-#navimobile .menu .burger-container .burger{
-	background-color: var(--g1);
-}
-#navimobile .cart a svg{
-	stroke: var(--g1);
-}
-#navimobile .cart span{
-	background: var(--c2);
-}
-#navimobile .cart span p{
-	color: white;
-}
 .body{
 	color: var(--g1);
 	text-align: center;

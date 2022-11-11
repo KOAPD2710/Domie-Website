@@ -44,16 +44,10 @@ body{
 	color: var(--g1);
 	background: var(--gra-full1);
 	background-color: #B84A80;
-	-ms-overflow-style: none;
-	scrollbar-width: none;
 	overflow: hidden;
 	overflow-y: scroll;
-	-webkit-overflow-scrolling: touch;
-	-webkit-font-smoothing: antialiased;
-	-webkit-text-size-adjust: 100%;
 }
 body::-webkit-scrollbar{
-	display: none;
 }
 .btn1{
 	width: 230px;
@@ -108,4 +102,10 @@ body::-webkit-scrollbar{
 	animation: cartbtn .7s ease-out;
 	transform-origin: center;
 	outline: none;
+}
+@media (max-width: 576px){
+	.break{
+		padding-left: 30px;
+		padding-right: 30px;
+	}
 }
