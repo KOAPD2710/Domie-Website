@@ -119,6 +119,7 @@ body::-webkit-scrollbar{
 	color: var(--g);
 	width: 30%;
 	max-width: 125px;
+	min-width: 90px;
 	margin-right: 1rem;
 	padding: 16px 15px;
 	max-height: 55px;

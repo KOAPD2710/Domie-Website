@@ -98,6 +98,7 @@
 	margin-right: 1rem;
 	user-select: none;
 	transition: all .2s ease;
+	cursor: pointer;
 }
 .scripttabs .tablinks a:nth-child(1),.scripttabs .tablinks a:nth-child(2){
 	border-right: 1.5px solid var(--g);
@@ -182,6 +183,7 @@
 	position: relative;
 	display: block;
 	width: 80%;
+	max-width: 500px;
 	height: auto;
 	margin: auto;
 }
@@ -205,16 +207,104 @@
 #smallscreen .sizechart .btn3{
 	margin-right: 0px;
 }
-#smallscreen .sizechart .btn3:nth-child(2){
-	margin-left: calc((100% - 125px*3)/4);
-	margin-right: calc((100% - 125px*3)/4);
+#smallscreen .buycontainer button{
+	width: 48%;
+}
+#smallscreen .buycontainersm{
+	margin-bottom: 50px;
+}
+#smallscreen .buycontainersm button{
+	width: 100%;
+	max-width: none;
+}
+#smallscreen .buycontainersm button:nth-child(2){
+	margin-top: 20px;
+}
+#smallscreen .descripsm{
+	position: relative;
+	display: flex;
+	text-align: center;
+	margin: auto;
+	max-width: 540px;
+}
+#smallscreen .descripsm a{
+	width: 100%;
+	font-size: 24px;
+	cursor: pointer;
+	color: var(--g);
+	transition: all .2s ease;
+}
+#smallscreen .descripsm a:nth-child(2){
+	border-left: 2px solid var(--g);
+	border-right: 2px solid var(--g);
+}
+#smallscreen .descripsm a:hover{
+	color: var(--c5);
+}
+#smallscreen .descripsm a.checked{
+	color: var(--c4);
+	pointer-events: none;
 }
 
-
-
-
-
-
+#smallscreen .tabcontent{
+	display: block;
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	margin-top: 40px;
+	text-align: left;
+}
+#smallscreen .tabcontent .contentdiv{
+	display: flex;
+	width: 300%;
+	height: auto;
+	behavior: smooth;
+	margin-left: 0%;
+	transition: all .5s cubic-bezier(.46,.01,.73,.99);
+}
+#smallscreen .tabcontent .content{
+	width: calc(100%/3);
+	height: auto;
+	flex-direction: column;
+	padding: 0px 15px;
+	row-gap: 25px;
+}
+#smallscreen .tabcontent .content ul{
+	list-style: none;
+	padding-left: 20px;
+}
+#smallscreen .tabcontent .content ul li{
+	position: relative;
+	list-style: none;
+}
+#smallscreen .tabcontent .content ul li p{
+}
+#smallscreen .tabcontent .content ul li:before{
+	content: "";
+	position: absolute;
+	display: block;
+	top: 0;
+	bottom: 2px;
+	margin: auto;
+	left: -20px;
+	width: 9px;
+	height: 9px;
+	background: var(--g1);
+	border-radius: 10000px;
+}
+#smallscreen .imginfo{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+	margin-top: 40px;
+}
+#smallscreen .imginfo img{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
 
 
 
