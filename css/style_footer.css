@@ -6,7 +6,7 @@
 	left: 0;
 	right: 0;
 	z-index: 1;
-	margin-top: 150px;
+	margin-top: calc(100vh - 208px - 485px);
 }
 #footer{
 	position: relative;
@@ -225,7 +225,7 @@
 	transition: transform .4s ease;
 }
 #policy:hover span{
-	color: white;
+	color: var(--c5);
 }
 
 

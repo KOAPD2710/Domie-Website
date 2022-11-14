@@ -82,7 +82,7 @@
 .carouselitem .charactor{
 	position: absolute;
 	display: flex;
-	top: 00%;
+	top: 0%;
 	width: 100%;
 	height: 100vh;
 	margin: auto;
@@ -100,7 +100,6 @@
 	top: 50%;
 	right: 50%;
 	left: 50%;
-	bottom: 50%;
 	transform: translate(-50%, -50%);
 	margin: auto;
 	width: 100%;
@@ -398,6 +397,9 @@
 	}
 	.carouselitem .charactor .word{
 		font-size: 100px;
+	}
+	.carouselitem .owl-one .owl-item.active.center .wrap a img{
+		width: 74%;
 	}
 }
 @media (max-width: 1200px){

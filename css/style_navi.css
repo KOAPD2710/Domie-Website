@@ -214,7 +214,7 @@
 	width: 34px;
 	height: 4px;
 	border-radius: 100px;
-	background-color: white;
+	background-color: var(--g1);
 	margin: 0px;
 	margin-bottom: 5px;
 	transition: transform 1s cubic-bezier(.48,-0.48,.47,1.63);
@@ -283,7 +283,7 @@
 }
 #navimobile .cart a svg{
 	position: relative;
-	stroke: white;
+	stroke: var(--g1);
 	stroke-width: 2.2px;
 	stroke-linejoin: round;
 	stroke-linecap: round;
@@ -295,7 +295,7 @@
 	top: -7px;
 	right: -7px;
 	border-radius: 50px;
-	background: white;
+	background: var(--c5);
 	height: 20px;
 	width: 20px;
 	text-align: center;
@@ -303,7 +303,7 @@
 
 }
 #navimobile .cart span p{
-	color: var(--c3);
+	color: white;
 	font-size: 14px;
 	padding-top: 0.5px;
 	margin: 0px;
@@ -323,12 +323,12 @@
 	width: 100vw;
 	height: 120vh;
 	text-align: center;
-	pointer-events: none;
 	background: linear-gradient(to bottom, #B84A80 5%, #FFBC80 110%);
 	opacity: 0;
 	z-index: 10001;
 	overflow: hidden;
 	transition: opacity .3s ease-in-out 0s;
+	pointer-events: none;
 }
 #menucontainer .logo, #menucontainer .cart{
 }
@@ -410,6 +410,8 @@
 	margin-left: auto;
 	margin-right: 20vw;
 	width: 150px;
+}
+#menucontainer.checked .cirleicon{
 	pointer-events: auto;
 }
 #menucontainer .cirleicon img{

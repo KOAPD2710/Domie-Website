@@ -20,6 +20,21 @@ body #footerformat{
 #navi .navlink ul li a:hover{
 	color: white;
 }
+#navimobile .menu .burger-container .burger{
+	background-color: white;
+}
+#navimobile .cart a svg{
+	stroke: white;
+}
+#navimobile .cart span{
+	background: white;
+}
+#navimobile .cart span p{
+	color: var(--c3);
+}
+
+
+
 
 #footer .footerlink .hr{
 	background-color: white;
